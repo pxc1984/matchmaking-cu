@@ -1,5 +1,6 @@
 mod services;
 mod constants;
+mod models;
 
 use tracing::{debug, error, info, warn};
 use tracing_subscriber;
@@ -8,6 +9,7 @@ use std::thread;
 use std::sync::{ Arc, Mutex };
 use std::time::Duration;
 use reqwest::blocking::*;
+
 use crate::constants::SERVER_NAME;
 use crate::services::*;
 use crate::services::get_url::*;
@@ -60,5 +62,6 @@ fn main() {
 
     info!("Connection to test system running on {} set up successfully", SERVER_NAME);
 
-
+    // test get_waiting_users
+    get_waiting_users::get("test_0", None);
 }

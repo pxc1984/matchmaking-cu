@@ -8,12 +8,14 @@ use std::time::{
     Duration,
 };
 use reqwest::blocking::*;
+use serde_json;
 
+use crate::models::user::User;
 use super::epoch::*;
 use super::get_url::*;
 use super::*;
 
-pub fn get_waiting_users(test_name: &str, input_epoch: Option<Epoch>) {
+pub fn get(test_name: &str, input_epoch: Option<Epoch>) {
     let client = Arc::new(Client::new());
     let epoch = Arc::new(input_epoch.unwrap_or_else(|| Epoch::new()));
 
@@ -33,7 +35,20 @@ pub fn get_waiting_users(test_name: &str, input_epoch: Option<Epoch>) {
             debug!("Attempting get_waiting_users with url {}", url);
             match client_ref.get(&url).send() {
                 Ok(response) => {
-                    // TODO: this
+                    if response.status().is_success() {
+                        match response.json::<Vec<User>>() {
+                            Ok(users) => {
+                                debug!("Got users from {}:\n {:?}", url, users);
+                            },
+                            Err(e) => {
+                                error!("Failed to parse JSON response from {}: {}", url, e);
+                            }
+                        }
+                    } else {
+                        let status = response.status();
+                        let text = response.text().unwrap_or_else(|_| "N/A".to_string());
+                        error!("Server returned error for {}: Status {} - Body: {}", url, status, text);
+                    }
                 }
                 Err(e) => {
                     error!("Failed to get waiting users by {}: {}", url, e);

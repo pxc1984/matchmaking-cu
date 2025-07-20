@@ -14,3 +14,4 @@ tower-http = {version = "0.6.1", features = ["trace"]}
 cached = "0.46.1"
 reqwest = { version = "0.12.22", features = ["default", "json", "blocking"] }
 futures = "0.3.31"
+uuid = { version = "1.17.0", features = ["serde"]}
