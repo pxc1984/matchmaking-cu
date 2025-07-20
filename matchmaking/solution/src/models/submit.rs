@@ -13,14 +13,14 @@ pub struct SubmitTeamsResponse {
     pub is_last_epoch: bool,
 }
 
-#[derive(Serialize)]
+#[derive(Serialize, Clone)]
 pub struct UserRole {
     pub id: uuid::Uuid,
     pub role: String,
 }
 
 pub trait GetInfo {
-    fn get(self, data: &Vec<UserData>) -> UserData;
+    fn get(&self, data: &HashMap<Uuid, UserData>) -> UserData;
 }
 
 #[derive(Serialize)]

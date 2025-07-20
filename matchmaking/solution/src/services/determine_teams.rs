@@ -92,8 +92,8 @@ fn get_median(list: Vec<u32>) -> f64
 impl SkillMedian for TeamResponse {
     fn calc_skill_median(&self, _data: &HashMap<Uuid, UserData>) -> f64 {
         let mut skill_levels: Vec<u32> = Vec::with_capacity(self.users.len());
-        for user in self.users {
-            let data = user.get(&_data);
+        for user in &self.users {
+            let data = user.clone().get(&_data).clone();
             skill_levels.push(data.mmr);
         }
         get_median(skill_levels.clone())
@@ -116,11 +116,11 @@ fn calc_skill_delta_by_role(
 ) -> i64 {
     let mut team1_role = HashMap::new();
     let mut role_delta = HashMap::new();
-    for user in team1.users {
+    for user in team1.users.clone() {
         let data = user.get(&user_data);
         team1_role.insert(user.role, data.mmr);
     }
-    for user in team2.users {
+    for user in team2.users.clone() {
         let data = user.get(&user_data);
         let entry = team1_role.get(&user.role).expect("found role that didn't match").clone();
         role_delta.insert(
@@ -134,7 +134,7 @@ fn calc_skill_delta_by_role(
 
     role_delta
         .iter()
-        .map(|key, value| {
+        .map(|(key, value)| {
             value
         })
         .sum()
