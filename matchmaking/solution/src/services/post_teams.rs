@@ -9,8 +9,8 @@ use std::time::{
 };
 use reqwest::blocking::*;
 use serde_json;
-use crate::models::submit::{Match, SubmitTeamsResponse, Team};
-use crate::models::user::User;
+use crate::models::submit::{Match, SubmitTeamsResponse, TeamResponse};
+use crate::models::user::UserData;
 use super::epoch::*;
 use super::get_url::*;
 use super::*;
