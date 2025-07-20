@@ -74,7 +74,7 @@ fn users_to_data(users: Vec<UserData>) -> HashMap<Uuid, UserData> {
 
 /// Группируем пользователей по их предпочтительной роли
 fn users_by_role(users: &Vec<UserData>) -> HashMap<String, Vec<UserData>> {
-    let mut users_by_role = HashMap::new();
+    let mut users_by_role: HashMap<String, Vec<UserData>> = HashMap::new();
     for user in users.iter() {
         if let Some(primary_role) = user.roles.first() {
             users_by_role
@@ -193,18 +193,18 @@ fn create_neighbor(team1: &Team, team2: &Team, pool: &HashMap<String, Vec<UserDa
 
     // 50% шанс просто поменять игроков командами
     if rng.random::<bool>() {
-        let player1 = new_team1.users.get(role_to_swap.clone()).unwrap().clone();
-        let player2 = new_team2.users.get(role_to_swap.clone()).unwrap().clone();
+        let player1 = new_team1.users.get(*role_to_swap).unwrap().clone();
+        let player2 = new_team2.users.get(*role_to_swap).unwrap().clone();
         new_team1.users.insert((*role_to_swap).clone(), player2);
         new_team2.users.insert((*role_to_swap).clone(), player1);
     }
     // 50% шанс поменять игрока на кого-то другого из пула
     else {
-        let current_p1 = new_team1.users.get(role_to_swap.clone()).unwrap();
-        let current_p2 = new_team2.users.get(role_to_swap.clone()).unwrap();
+        let current_p1 = new_team1.users.get(*role_to_swap).unwrap();
+        let current_p2 = new_team2.users.get(*role_to_swap).unwrap();
 
         // Ищем кандидата, которого еще не пытались определить на эту роль
-        if let Some(new_player) = pool.get(role_to_swap.clone()).unwrap().iter().find(|p| p.user_id != current_p1.user_id && p.user_id != current_p2.user_id) {
+        if let Some(new_player) = pool.get(*role_to_swap).unwrap().iter().find(|p| p.user_id != current_p1.user_id && p.user_id != current_p2.user_id) {
             // Поменять местами с игроком из красной команды
              if rng.random::<bool>() {
                 new_team1.users.insert((*role_to_swap).clone(), new_player.clone());
