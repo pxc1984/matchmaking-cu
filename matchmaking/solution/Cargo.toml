@@ -10,4 +10,4 @@ serde = {version = "1.0.219", features = ["derive"]}
 tracing = "0.1.41"
 tracing-subscriber = {version = "0.3.18", features = ["env-filter"]}
 reqwest = { version = "0.12.22", features = ["default", "json", "blocking"] }
-uuid = { version = "1.17.0", features = ["serde", "std"]}
+uuid = { version = "1.17.0", features = ["serde", "std", "v4"]}

@@ -1,5 +1,6 @@
 ﻿use std::collections::HashMap;
 use uuid::Uuid;
+use crate::constants::*;
 use crate::models::submit::*;
 use crate::models::user::UserData;
 
@@ -8,9 +9,56 @@ use crate::models::user::UserData;
 /// - предпочитаемых позиций
 /// - того, сколько времени они ждали
 pub fn determine(users: Vec<UserData>) -> Vec<Match> {
-    let data = users_to_data(users);
+    let users_data = users_to_data(users.clone());
 
-    vec![] // placeholder
+    let mut available_users = users;
+
+    // Сортируем пользователей по ММР по убыванию
+    available_users.sort_by(|a, b| b.mmr.cmp(&a.mmr));
+
+    let mut formed_matches: Vec<Match> = Vec::new();
+
+    while available_users.len() >= PLAYERS_PER_MATCH {
+        let mut team1_players: Vec<UserRole> = Vec::with_capacity(TEAM_SIZE);
+        let mut team2_players: Vec<UserRole> = Vec::with_capacity(TEAM_SIZE);
+
+        for i in 0..PLAYERS_PER_MATCH {
+            let user = available_users.remove(0);
+
+            let user_role = UserRole {
+                id: user.user_id,
+                role: user.roles.get(0).cloned().unwrap(),
+            };
+
+            if i % 4 == 0 || i % 4 == 3 {
+                team1_players.push(user_role);
+            } else {
+                team2_players.push(user_role);
+            }
+        }
+
+        // Условные обозначения: первая команда - красная, вторая команда - синяя
+        let team1_response = TeamResponse {
+            side: "red".to_string(),
+            users: team1_players,
+        };
+        let team2_response = TeamResponse {
+            side: "blue".to_string(),
+            users: team2_players,
+        };
+
+        let new_match = Match {
+            match_id: Uuid::new_v4().to_string(),
+            teams: vec![team1_response, team2_response],
+        };
+
+        // Реализован чистый жадный алгоритм, в нем мы все принимаем.
+        // Если будешь делать более продвинутый алгоритм, то на этом шаге надо подсчитывать
+        // честность и потенциально отклонять матч или пытаться пересоставить его, если он слишком имба.
+        formed_matches.push(new_match);
+    }
+
+    formed_matches
 }
 
 fn users_to_data(users: Vec<UserData>) -> HashMap<Uuid, UserData> {
