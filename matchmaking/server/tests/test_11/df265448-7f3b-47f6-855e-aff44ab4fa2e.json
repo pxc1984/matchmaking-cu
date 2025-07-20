@@ -1,0 +1,2330 @@
+[
+  {
+    "user_id": "cfbdd0f2-57f2-4a66-8d10-604ad245f38e",
+    "mmr": 1229,
+    "roles": [
+      "mid",
+      "jungle",
+      "sup",
+      "bot",
+      "top"
+    ],
+    "waitingTime": 74
+  },
+  {
+    "user_id": "134d784f-fbb4-4625-a4a5-0cccd2b1c263",
+    "mmr": 2305,
+    "roles": [
+      "bot",
+      "mid",
+      "sup",
+      "jungle",
+      "top"
+    ],
+    "waitingTime": 88
+  },
+  {
+    "user_id": "77318e5c-d75c-4124-b068-86d615003dc8",
+    "mmr": 1498,
+    "roles": [
+      "jungle",
+      "top",
+      "mid",
+      "bot",
+      "sup"
+    ],
+    "waitingTime": 142
+  },
+  {
+    "user_id": "2ef4f198-b7f3-4086-92a1-1c05f1a56d28",
+    "mmr": 1693,
+    "roles": [
+      "bot",
+      "jungle",
+      "mid",
+      "top",
+      "sup"
+    ],
+    "waitingTime": 24
+  },
+  {
+    "user_id": "488f8c3d-b27e-431d-a906-b594e4b5bdc1",
+    "mmr": 524,
+    "roles": [
+      "bot",
+      "mid",
+      "jungle",
+      "sup",
+      "top"
+    ],
+    "waitingTime": 32
+  },
+  {
+    "user_id": "d37cb76f-f5dc-4773-9c1c-5ade0215cd70",
+    "mmr": 2692,
+    "roles": [
+      "top",
+      "mid",
+      "jungle",
+      "bot",
+      "sup"
+    ],
+    "waitingTime": 1
+  },
+  {
+    "user_id": "6e6336fc-7085-4bc8-b5d2-10f038999c9e",
+    "mmr": 2243,
+    "roles": [
+      "top",
+      "bot",
+      "jungle",
+      "sup",
+      "mid"
+    ],
+    "waitingTime": 141
+  },
+  {
+    "user_id": "99b12f13-e119-46c2-9113-949adea3460a",
+    "mmr": 2996,
+    "roles": [
+      "sup",
+      "jungle",
+      "bot",
+      "top",
+      "mid"
+    ],
+    "waitingTime": 178
+  },
+  {
+    "user_id": "5e667280-9c7c-415f-a713-bc912b2301f9",
+    "mmr": 2570,
+    "roles": [
+      "mid",
+      "sup",
+      "bot",
+      "top",
+      "jungle"
+    ],
+    "waitingTime": 29
+  },
+  {
+    "user_id": "6e2ff112-7b0a-4f93-b87e-081d2f33d342",
+    "mmr": 1522,
+    "roles": [
+      "sup",
+      "jungle",
+      "mid",
+      "bot",
+      "top"
+    ],
+    "waitingTime": 107
+  },
+  {
+    "user_id": "147eeb5c-4f57-4f8e-b877-4b178d6dc72e",
+    "mmr": 1477,
+    "roles": [
+      "mid",
+      "bot",
+      "top",
+      "jungle",
+      "sup"
+    ],
+    "waitingTime": 26
+  },
+  {
+    "user_id": "98e9e55a-9d8c-4c56-b4a7-e24048acfafc",
+    "mmr": 1969,
+    "roles": [
+      "mid",
+      "sup",
+      "bot",
+      "top",
+      "jungle"
+    ],
+    "waitingTime": 113
+  },
+  {
+    "user_id": "d6a1c9b4-71ee-4a8a-8752-05dd9af836f2",
+    "mmr": 1009,
+    "roles": [
+      "top",
+      "mid",
+      "bot",
+      "sup",
+      "jungle"
+    ],
+    "waitingTime": 79
+  },
+  {
+    "user_id": "f045a22d-086b-4060-8dd6-44f13938e27e",
+    "mmr": 763,
+    "roles": [
+      "bot",
+      "sup",
+      "top",
+      "mid",
+      "jungle"
+    ],
+    "waitingTime": 37
+  },
+  {
+    "user_id": "e2290621-307a-4501-afe9-feb4dd38f521",
+    "mmr": 725,
+    "roles": [
+      "top",
+      "sup",
+      "mid",
+      "bot",
+      "jungle"
+    ],
+    "waitingTime": 15
+  },
+  {
+    "user_id": "edbd8077-9265-4fab-9e70-a087c53305f8",
+    "mmr": 2221,
+    "roles": [
+      "mid",
+      "top",
+      "bot",
+      "sup",
+      "jungle"
+    ],
+    "waitingTime": 136
+  },
+  {
+    "user_id": "58b9ea85-c9f1-4cc6-afd6-323451e4381c",
+    "mmr": 2344,
+    "roles": [
+      "top",
+      "jungle",
+      "bot",
+      "sup",
+      "mid"
+    ],
+    "waitingTime": 190
+  },
+  {
+    "user_id": "94cbfb78-5ce5-45c6-bbff-b72a46532fba",
+    "mmr": 860,
+    "roles": [
+      "jungle",
+      "mid",
+      "sup",
+      "bot",
+      "top"
+    ],
+    "waitingTime": 19
+  },
+  {
+    "user_id": "2fc0f5d2-c4b5-4a80-8cda-033feaa2c1c0",
+    "mmr": 1496,
+    "roles": [
+      "bot",
+      "sup",
+      "jungle",
+      "mid",
+      "top"
+    ],
+    "waitingTime": 63
+  },
+  {
+    "user_id": "96aaf863-fcf5-4a21-af15-08ea94a3c53e",
+    "mmr": 995,
+    "roles": [
+      "bot",
+      "jungle",
+      "sup",
+      "top",
+      "mid"
+    ],
+    "waitingTime": 5
+  },
+  {
+    "user_id": "d47cd4d3-18f7-49f7-a025-3d608671d6c7",
+    "mmr": 1122,
+    "roles": [
+      "bot",
+      "top",
+      "jungle",
+      "mid",
+      "sup"
+    ],
+    "waitingTime": 189
+  },
+  {
+    "user_id": "0ba87349-1179-46f6-8e9e-f62b5af26905",
+    "mmr": 1336,
+    "roles": [
+      "top",
+      "sup",
+      "bot",
+      "mid",
+      "jungle"
+    ],
+    "waitingTime": 89
+  },
+  {
+    "user_id": "4fe220f3-d794-46f1-8208-340ab3f00d19",
+    "mmr": 778,
+    "roles": [
+      "bot",
+      "mid",
+      "top",
+      "jungle",
+      "sup"
+    ],
+    "waitingTime": 171
+  },
+  {
+    "user_id": "7bc6b1c1-7858-4ddb-ba81-9304b86d61f6",
+    "mmr": 2093,
+    "roles": [
+      "mid",
+      "sup",
+      "jungle",
+      "bot",
+      "top"
+    ],
+    "waitingTime": 57
+  },
+  {
+    "user_id": "ba82614f-1ea4-4d42-a19b-8f24d21d1f81",
+    "mmr": 1205,
+    "roles": [
+      "mid",
+      "jungle",
+      "sup",
+      "top",
+      "bot"
+    ],
+    "waitingTime": 63
+  },
+  {
+    "user_id": "617a2340-2540-4786-965c-09416d5b79fd",
+    "mmr": 2377,
+    "roles": [
+      "jungle",
+      "mid",
+      "top",
+      "sup",
+      "bot"
+    ],
+    "waitingTime": 107
+  },
+  {
+    "user_id": "4e684191-b729-4511-9f17-6f60581e7bb0",
+    "mmr": 1710,
+    "roles": [
+      "jungle",
+      "sup",
+      "mid",
+      "top",
+      "bot"
+    ],
+    "waitingTime": 159
+  },
+  {
+    "user_id": "2cd9c5e3-f2b5-4dba-91d5-3dee87391b9d",
+    "mmr": 1970,
+    "roles": [
+      "bot",
+      "sup",
+      "jungle",
+      "mid",
+      "top"
+    ],
+    "waitingTime": 44
+  },
+  {
+    "user_id": "a1225a66-4c93-4e3a-8529-16adbde67d16",
+    "mmr": 2192,
+    "roles": [
+      "mid",
+      "top",
+      "sup",
+      "jungle",
+      "bot"
+    ],
+    "waitingTime": 38
+  },
+  {
+    "user_id": "e70d5d0a-bc6b-48ca-97e3-cced4ec3e70a",
+    "mmr": 2844,
+    "roles": [
+      "bot",
+      "mid",
+      "sup",
+      "top",
+      "jungle"
+    ],
+    "waitingTime": 95
+  },
+  {
+    "user_id": "15558efe-fc42-427f-af2a-0d1f4e38b2fe",
+    "mmr": 2070,
+    "roles": [
+      "bot",
+      "jungle",
+      "top",
+      "sup",
+      "mid"
+    ],
+    "waitingTime": 42
+  },
+  {
+    "user_id": "d00a48d2-d8aa-4a84-9ce1-cdfeac0b9e23",
+    "mmr": 1912,
+    "roles": [
+      "bot",
+      "top",
+      "sup",
+      "jungle",
+      "mid"
+    ],
+    "waitingTime": 149
+  },
+  {
+    "user_id": "f4dc5ab4-1f3b-4478-87b3-0891278671d5",
+    "mmr": 902,
+    "roles": [
+      "top",
+      "sup",
+      "jungle",
+      "bot",
+      "mid"
+    ],
+    "waitingTime": 126
+  },
+  {
+    "user_id": "7b3c478b-4003-4823-b15c-b45420ae9fa2",
+    "mmr": 900,
+    "roles": [
+      "bot",
+      "sup",
+      "jungle",
+      "mid",
+      "top"
+    ],
+    "waitingTime": 99
+  },
+  {
+    "user_id": "7def4a92-bab6-475b-a6aa-576e27770de6",
+    "mmr": 2583,
+    "roles": [
+      "jungle",
+      "mid",
+      "top",
+      "sup",
+      "bot"
+    ],
+    "waitingTime": 4
+  },
+  {
+    "user_id": "81812292-1eaa-46e7-8ddd-948fd5c54f58",
+    "mmr": 1391,
+    "roles": [
+      "jungle",
+      "top",
+      "bot",
+      "sup",
+      "mid"
+    ],
+    "waitingTime": 137
+  },
+  {
+    "user_id": "cca9c15f-cc54-4a70-9698-848d8af47b4d",
+    "mmr": 2062,
+    "roles": [
+      "bot",
+      "jungle",
+      "mid",
+      "sup",
+      "top"
+    ],
+    "waitingTime": 9
+  },
+  {
+    "user_id": "9f3c88c1-30fc-4398-982a-5833b29505d8",
+    "mmr": 2199,
+    "roles": [
+      "mid",
+      "bot",
+      "top",
+      "sup",
+      "jungle"
+    ],
+    "waitingTime": 105
+  },
+  {
+    "user_id": "8ff8ea9c-cbee-47bd-a8c2-697606365790",
+    "mmr": 2560,
+    "roles": [
+      "mid",
+      "top",
+      "jungle",
+      "bot",
+      "sup"
+    ],
+    "waitingTime": 42
+  },
+  {
+    "user_id": "b9d48eb0-1965-414c-b8c2-fe5792ae95d8",
+    "mmr": 1693,
+    "roles": [
+      "bot",
+      "sup",
+      "top",
+      "jungle",
+      "mid"
+    ],
+    "waitingTime": 55
+  },
+  {
+    "user_id": "a416542a-50c2-476a-bdcd-1d6df742ab48",
+    "mmr": 867,
+    "roles": [
+      "bot",
+      "mid",
+      "jungle",
+      "sup",
+      "top"
+    ],
+    "waitingTime": 156
+  },
+  {
+    "user_id": "cc6e7159-0f2e-490a-94bd-57cf23e8f61c",
+    "mmr": 2498,
+    "roles": [
+      "top",
+      "sup",
+      "mid",
+      "jungle",
+      "bot"
+    ],
+    "waitingTime": 176
+  },
+  {
+    "user_id": "1da92721-0c0b-44c8-8e9c-d5bb1cd9912c",
+    "mmr": 1053,
+    "roles": [
+      "bot",
+      "sup",
+      "top",
+      "mid",
+      "jungle"
+    ],
+    "waitingTime": 77
+  },
+  {
+    "user_id": "0a02f603-e50b-4169-8251-0812f84d1291",
+    "mmr": 1617,
+    "roles": [
+      "top",
+      "jungle",
+      "sup",
+      "mid",
+      "bot"
+    ],
+    "waitingTime": 74
+  },
+  {
+    "user_id": "f7cc2712-9306-4e9e-bcff-7d7dc2b304d6",
+    "mmr": 876,
+    "roles": [
+      "sup",
+      "jungle",
+      "bot",
+      "mid",
+      "top"
+    ],
+    "waitingTime": 103
+  },
+  {
+    "user_id": "bd61d362-04f4-42fc-9b8d-fbe41b9a101b",
+    "mmr": 1694,
+    "roles": [
+      "sup",
+      "top",
+      "mid",
+      "bot",
+      "jungle"
+    ],
+    "waitingTime": 130
+  },
+  {
+    "user_id": "cbfe5816-e28f-4ec0-8b01-6f601d42fffa",
+    "mmr": 2048,
+    "roles": [
+      "top",
+      "bot",
+      "jungle",
+      "mid",
+      "sup"
+    ],
+    "waitingTime": 172
+  },
+  {
+    "user_id": "1c483727-ca63-4329-8e46-2a1de0fb909e",
+    "mmr": 2304,
+    "roles": [
+      "bot",
+      "mid",
+      "jungle",
+      "top",
+      "sup"
+    ],
+    "waitingTime": 145
+  },
+  {
+    "user_id": "f9558ef4-5eae-42c5-b538-f01c0f0a974a",
+    "mmr": 1700,
+    "roles": [
+      "top",
+      "mid",
+      "sup",
+      "bot",
+      "jungle"
+    ],
+    "waitingTime": 159
+  },
+  {
+    "user_id": "c7a40105-c5ec-4bed-bb8b-8ce1e533d1da",
+    "mmr": 1886,
+    "roles": [
+      "bot",
+      "top",
+      "sup",
+      "mid",
+      "jungle"
+    ],
+    "waitingTime": 47
+  },
+  {
+    "user_id": "ca73000c-54b3-4edf-80a5-7a9c745aa6ac",
+    "mmr": 2756,
+    "roles": [
+      "sup",
+      "jungle",
+      "top",
+      "bot",
+      "mid"
+    ],
+    "waitingTime": 116
+  },
+  {
+    "user_id": "16b75397-3cfd-4806-9d8c-29f534090522",
+    "mmr": 2353,
+    "roles": [
+      "sup",
+      "top",
+      "jungle",
+      "bot",
+      "mid"
+    ],
+    "waitingTime": 8
+  },
+  {
+    "user_id": "66a64be3-fd11-4f91-b90a-fa837b3308f3",
+    "mmr": 961,
+    "roles": [
+      "bot",
+      "top",
+      "sup",
+      "jungle",
+      "mid"
+    ],
+    "waitingTime": 64
+  },
+  {
+    "user_id": "678d7fec-230c-4656-9fbf-ae4d1a80111f",
+    "mmr": 1908,
+    "roles": [
+      "sup",
+      "top",
+      "bot",
+      "jungle",
+      "mid"
+    ],
+    "waitingTime": 11
+  },
+  {
+    "user_id": "cc588605-2c53-4e49-b964-c888b300105e",
+    "mmr": 1234,
+    "roles": [
+      "top",
+      "sup",
+      "jungle",
+      "bot",
+      "mid"
+    ],
+    "waitingTime": 53
+  },
+  {
+    "user_id": "4f23de11-9c82-4da7-8712-cc9b6b952fac",
+    "mmr": 899,
+    "roles": [
+      "top",
+      "jungle",
+      "sup",
+      "mid",
+      "bot"
+    ],
+    "waitingTime": 168
+  },
+  {
+    "user_id": "cca81bc0-812d-49c6-b7fc-4af7f31a1fd2",
+    "mmr": 800,
+    "roles": [
+      "sup",
+      "mid",
+      "jungle",
+      "bot",
+      "top"
+    ],
+    "waitingTime": 14
+  },
+  {
+    "user_id": "59b0e0f6-e48c-46b4-9490-8ce7487a0165",
+    "mmr": 1742,
+    "roles": [
+      "bot",
+      "top",
+      "jungle",
+      "sup",
+      "mid"
+    ],
+    "waitingTime": 43
+  },
+  {
+    "user_id": "e90f52ba-bb05-476a-8197-6ecfd05187dc",
+    "mmr": 2285,
+    "roles": [
+      "bot",
+      "mid",
+      "jungle",
+      "top",
+      "sup"
+    ],
+    "waitingTime": 51
+  },
+  {
+    "user_id": "91e99991-6e64-4cf5-b57b-aa9a67cf241b",
+    "mmr": 1077,
+    "roles": [
+      "bot",
+      "jungle",
+      "mid",
+      "sup",
+      "top"
+    ],
+    "waitingTime": 99
+  },
+  {
+    "user_id": "7722c094-6b1d-4dd4-b75b-676f62c007ed",
+    "mmr": 1277,
+    "roles": [
+      "top",
+      "bot",
+      "jungle",
+      "mid",
+      "sup"
+    ],
+    "waitingTime": 56
+  },
+  {
+    "user_id": "fa048a6c-feab-41b0-9bc5-a7d3b816d520",
+    "mmr": 2950,
+    "roles": [
+      "jungle",
+      "sup",
+      "bot",
+      "top",
+      "mid"
+    ],
+    "waitingTime": 176
+  },
+  {
+    "user_id": "fa9ddeb4-375a-4615-b24b-6e939fe093f6",
+    "mmr": 1358,
+    "roles": [
+      "bot",
+      "sup",
+      "top",
+      "jungle",
+      "mid"
+    ],
+    "waitingTime": 185
+  },
+  {
+    "user_id": "768a05c1-1e35-40c6-8131-c474ecc5e8e9",
+    "mmr": 2906,
+    "roles": [
+      "bot",
+      "mid",
+      "jungle",
+      "top",
+      "sup"
+    ],
+    "waitingTime": 28
+  },
+  {
+    "user_id": "1f3f1006-30d1-48dc-9d79-844b330803f1",
+    "mmr": 2905,
+    "roles": [
+      "jungle",
+      "top",
+      "sup",
+      "mid",
+      "bot"
+    ],
+    "waitingTime": 80
+  },
+  {
+    "user_id": "08e8b8ac-b5a7-42b3-835c-596d6213bf9f",
+    "mmr": 2306,
+    "roles": [
+      "bot",
+      "sup",
+      "mid",
+      "top",
+      "jungle"
+    ],
+    "waitingTime": 26
+  },
+  {
+    "user_id": "5ca600ad-b80c-4e13-a6f5-b77ff4968d83",
+    "mmr": 1126,
+    "roles": [
+      "top",
+      "sup",
+      "jungle",
+      "mid",
+      "bot"
+    ],
+    "waitingTime": 167
+  },
+  {
+    "user_id": "ab098982-96f8-46c2-8de3-ebf54f2a923b",
+    "mmr": 2075,
+    "roles": [
+      "bot",
+      "top",
+      "sup",
+      "mid",
+      "jungle"
+    ],
+    "waitingTime": 37
+  },
+  {
+    "user_id": "27c7132c-9cb0-4e9f-9125-12e2171e20df",
+    "mmr": 2550,
+    "roles": [
+      "bot",
+      "mid",
+      "jungle",
+      "top",
+      "sup"
+    ],
+    "waitingTime": 38
+  },
+  {
+    "user_id": "fcb0d0e7-8d4c-4cc7-ac29-934589892236",
+    "mmr": 618,
+    "roles": [
+      "top",
+      "bot",
+      "sup",
+      "jungle",
+      "mid"
+    ],
+    "waitingTime": 29
+  },
+  {
+    "user_id": "d92c855b-826a-438e-bd18-86deb53e1322",
+    "mmr": 1068,
+    "roles": [
+      "top",
+      "sup",
+      "bot",
+      "mid",
+      "jungle"
+    ],
+    "waitingTime": 94
+  },
+  {
+    "user_id": "4fcc2c40-f1bf-4b9e-bacc-55ce80f0d6d9",
+    "mmr": 1849,
+    "roles": [
+      "sup",
+      "mid",
+      "jungle",
+      "top",
+      "bot"
+    ],
+    "waitingTime": 189
+  },
+  {
+    "user_id": "52bc8095-34b0-41ee-8183-35af33f102de",
+    "mmr": 2956,
+    "roles": [
+      "top",
+      "bot",
+      "sup",
+      "jungle",
+      "mid"
+    ],
+    "waitingTime": 194
+  },
+  {
+    "user_id": "222f92c4-f3bf-43e6-ac70-f3bea03dd759",
+    "mmr": 2043,
+    "roles": [
+      "jungle",
+      "mid",
+      "top",
+      "bot",
+      "sup"
+    ],
+    "waitingTime": 16
+  },
+  {
+    "user_id": "e5f3a786-8673-48a6-828b-e8c0f1688f19",
+    "mmr": 1581,
+    "roles": [
+      "bot",
+      "mid",
+      "top",
+      "sup",
+      "jungle"
+    ],
+    "waitingTime": 67
+  },
+  {
+    "user_id": "2a369885-ddb4-49de-a202-681a6455382d",
+    "mmr": 1546,
+    "roles": [
+      "top",
+      "jungle",
+      "mid",
+      "bot",
+      "sup"
+    ],
+    "waitingTime": 22
+  },
+  {
+    "user_id": "5ae4544c-5318-41c3-92b0-9e62d0f74fb5",
+    "mmr": 1437,
+    "roles": [
+      "mid",
+      "top",
+      "bot",
+      "jungle",
+      "sup"
+    ],
+    "waitingTime": 74
+  },
+  {
+    "user_id": "a71fc4a5-3705-45c1-9671-76fd6a89660b",
+    "mmr": 755,
+    "roles": [
+      "bot",
+      "jungle",
+      "mid",
+      "sup",
+      "top"
+    ],
+    "waitingTime": 142
+  },
+  {
+    "user_id": "a5fdf399-3ec7-42bf-8870-ecb98fd840e3",
+    "mmr": 1594,
+    "roles": [
+      "top",
+      "bot",
+      "jungle",
+      "mid",
+      "sup"
+    ],
+    "waitingTime": 5
+  },
+  {
+    "user_id": "f880ca28-bb01-422e-a320-01064338b74d",
+    "mmr": 2559,
+    "roles": [
+      "mid",
+      "top",
+      "bot",
+      "jungle",
+      "sup"
+    ],
+    "waitingTime": 80
+  },
+  {
+    "user_id": "3fa8d3b4-1a70-4b74-b813-b3178f9d2d4b",
+    "mmr": 2797,
+    "roles": [
+      "top",
+      "bot",
+      "sup",
+      "jungle",
+      "mid"
+    ],
+    "waitingTime": 114
+  },
+  {
+    "user_id": "14e76923-601e-4ca5-9ee6-2dd32b7da7b4",
+    "mmr": 2977,
+    "roles": [
+      "bot",
+      "top",
+      "sup",
+      "jungle",
+      "mid"
+    ],
+    "waitingTime": 189
+  },
+  {
+    "user_id": "8bd0641d-9943-404a-b893-152c3f933c59",
+    "mmr": 2844,
+    "roles": [
+      "top",
+      "sup",
+      "jungle",
+      "mid",
+      "bot"
+    ],
+    "waitingTime": 139
+  },
+  {
+    "user_id": "7198f831-288e-4a8f-9d90-6cbbbb3aff3d",
+    "mmr": 2148,
+    "roles": [
+      "bot",
+      "mid",
+      "jungle",
+      "top",
+      "sup"
+    ],
+    "waitingTime": 141
+  },
+  {
+    "user_id": "64b16a5a-ae82-47fe-b8dc-d9f4cf47f571",
+    "mmr": 1797,
+    "roles": [
+      "jungle",
+      "top",
+      "sup",
+      "mid",
+      "bot"
+    ],
+    "waitingTime": 167
+  },
+  {
+    "user_id": "71bffc81-f4dd-4548-a1b9-b22729fbd792",
+    "mmr": 2118,
+    "roles": [
+      "mid",
+      "jungle",
+      "sup",
+      "bot",
+      "top"
+    ],
+    "waitingTime": 115
+  },
+  {
+    "user_id": "8d18f5b9-26d4-4d8c-bf2e-1eb5c60a022c",
+    "mmr": 1455,
+    "roles": [
+      "bot",
+      "mid",
+      "jungle",
+      "sup",
+      "top"
+    ],
+    "waitingTime": 130
+  },
+  {
+    "user_id": "164621a0-4cb0-4bd4-9600-020433120f65",
+    "mmr": 1385,
+    "roles": [
+      "top",
+      "mid",
+      "bot",
+      "sup",
+      "jungle"
+    ],
+    "waitingTime": 64
+  },
+  {
+    "user_id": "9d07ee74-f76e-46a8-895b-e95ab579c3af",
+    "mmr": 2432,
+    "roles": [
+      "mid",
+      "bot",
+      "jungle",
+      "top",
+      "sup"
+    ],
+    "waitingTime": 198
+  },
+  {
+    "user_id": "fb697cf7-f39e-4c7b-b9b9-b4478e23084a",
+    "mmr": 2243,
+    "roles": [
+      "jungle",
+      "mid",
+      "top",
+      "sup",
+      "bot"
+    ],
+    "waitingTime": 35
+  },
+  {
+    "user_id": "9162803c-703b-43af-a909-5e17a8d9b326",
+    "mmr": 866,
+    "roles": [
+      "jungle",
+      "top",
+      "bot",
+      "sup",
+      "mid"
+    ],
+    "waitingTime": 171
+  },
+  {
+    "user_id": "f4a0368c-b436-4fd7-8c9a-a0176d4bd945",
+    "mmr": 2937,
+    "roles": [
+      "sup",
+      "mid",
+      "jungle",
+      "bot",
+      "top"
+    ],
+    "waitingTime": 70
+  },
+  {
+    "user_id": "7009021b-a1e0-4a01-a68b-98d7b6120d6d",
+    "mmr": 1846,
+    "roles": [
+      "sup",
+      "mid",
+      "jungle",
+      "bot",
+      "top"
+    ],
+    "waitingTime": 103
+  },
+  {
+    "user_id": "67ef6baa-72f7-4405-bf97-b6ecc16b1492",
+    "mmr": 2860,
+    "roles": [
+      "sup",
+      "jungle",
+      "bot",
+      "mid",
+      "top"
+    ],
+    "waitingTime": 65
+  },
+  {
+    "user_id": "cf3087e2-3b3f-44af-ba1b-65720c8a7038",
+    "mmr": 2110,
+    "roles": [
+      "top",
+      "bot",
+      "mid",
+      "sup",
+      "jungle"
+    ],
+    "waitingTime": 183
+  },
+  {
+    "user_id": "d6827803-e4f2-4b45-9f42-0202e108a76c",
+    "mmr": 1623,
+    "roles": [
+      "top",
+      "sup",
+      "jungle",
+      "bot",
+      "mid"
+    ],
+    "waitingTime": 151
+  },
+  {
+    "user_id": "d2e6d79b-196a-4d0b-9cc2-16adcd796515",
+    "mmr": 1099,
+    "roles": [
+      "mid",
+      "top",
+      "bot",
+      "jungle",
+      "sup"
+    ],
+    "waitingTime": 74
+  },
+  {
+    "user_id": "8c57f5f0-5447-4464-8d00-1e286e33ecc9",
+    "mmr": 1912,
+    "roles": [
+      "jungle",
+      "mid",
+      "sup",
+      "bot",
+      "top"
+    ],
+    "waitingTime": 162
+  },
+  {
+    "user_id": "1f6e14e2-e244-4b57-bc47-c1b7ae8aa2ae",
+    "mmr": 2614,
+    "roles": [
+      "sup",
+      "bot",
+      "mid",
+      "top",
+      "jungle"
+    ],
+    "waitingTime": 21
+  },
+  {
+    "user_id": "9eea7801-28b1-4f88-9e75-3db6634f81f7",
+    "mmr": 1926,
+    "roles": [
+      "sup",
+      "bot",
+      "jungle",
+      "mid",
+      "top"
+    ],
+    "waitingTime": 170
+  },
+  {
+    "user_id": "a589d4f2-f9a9-4379-a4fe-702a1d22cb03",
+    "mmr": 1788,
+    "roles": [
+      "top",
+      "jungle",
+      "bot",
+      "sup",
+      "mid"
+    ],
+    "waitingTime": 8
+  },
+  {
+    "user_id": "04d51caf-9dfb-47c2-995c-585f44aff154",
+    "mmr": 2492,
+    "roles": [
+      "bot",
+      "top",
+      "mid",
+      "jungle",
+      "sup"
+    ],
+    "waitingTime": 185
+  },
+  {
+    "user_id": "5f30afca-9528-429b-a1d9-fcb8bdfb75a8",
+    "mmr": 1100,
+    "roles": [
+      "jungle",
+      "top",
+      "sup",
+      "mid",
+      "bot"
+    ],
+    "waitingTime": 41
+  },
+  {
+    "user_id": "b154ccd9-8945-41d7-8b32-06063d9717dd",
+    "mmr": 1102,
+    "roles": [
+      "sup",
+      "bot",
+      "jungle",
+      "top",
+      "mid"
+    ],
+    "waitingTime": 154
+  },
+  {
+    "user_id": "248cfa44-19e6-4963-8a21-b0fa198e6eb7",
+    "mmr": 1070,
+    "roles": [
+      "bot",
+      "sup",
+      "top",
+      "mid",
+      "jungle"
+    ],
+    "waitingTime": 183
+  },
+  {
+    "user_id": "6151affc-2ac4-45b8-9c5d-0e91f54bb3bd",
+    "mmr": 1996,
+    "roles": [
+      "jungle",
+      "top",
+      "sup",
+      "bot",
+      "mid"
+    ],
+    "waitingTime": 18
+  },
+  {
+    "user_id": "da1bb8c1-0243-4c9e-a46c-fd2148b85e2f",
+    "mmr": 2502,
+    "roles": [
+      "top",
+      "mid",
+      "jungle",
+      "sup",
+      "bot"
+    ],
+    "waitingTime": 188
+  },
+  {
+    "user_id": "4f5f687b-db39-45d2-9364-5a01c3fab80d",
+    "mmr": 1336,
+    "roles": [
+      "mid",
+      "jungle",
+      "sup",
+      "top",
+      "bot"
+    ],
+    "waitingTime": 102
+  },
+  {
+    "user_id": "3b749e44-19a5-47a0-ac3c-356d7450e52f",
+    "mmr": 2067,
+    "roles": [
+      "jungle",
+      "sup",
+      "bot",
+      "mid",
+      "top"
+    ],
+    "waitingTime": 185
+  },
+  {
+    "user_id": "69e29c98-9386-49a0-8bfe-c0e16e30fd01",
+    "mmr": 2821,
+    "roles": [
+      "mid",
+      "sup",
+      "bot",
+      "top",
+      "jungle"
+    ],
+    "waitingTime": 12
+  },
+  {
+    "user_id": "13b350cf-ce56-4a19-90dd-2bda98e83a88",
+    "mmr": 1274,
+    "roles": [
+      "top",
+      "sup",
+      "jungle",
+      "mid",
+      "bot"
+    ],
+    "waitingTime": 14
+  },
+  {
+    "user_id": "6a3a6793-24e5-41d9-9c3f-6af952c7a541",
+    "mmr": 1941,
+    "roles": [
+      "jungle",
+      "top",
+      "sup",
+      "mid",
+      "bot"
+    ],
+    "waitingTime": 65
+  },
+  {
+    "user_id": "b7f1b1f9-1656-47da-a827-2c58130db91c",
+    "mmr": 1396,
+    "roles": [
+      "mid",
+      "sup",
+      "top",
+      "jungle",
+      "bot"
+    ],
+    "waitingTime": 80
+  },
+  {
+    "user_id": "570d5784-e756-4959-bd3d-a71ed96b4b85",
+    "mmr": 2668,
+    "roles": [
+      "jungle",
+      "top",
+      "bot",
+      "mid",
+      "sup"
+    ],
+    "waitingTime": 69
+  },
+  {
+    "user_id": "316d6477-f996-488a-9ff7-9bc749ab81a3",
+    "mmr": 1812,
+    "roles": [
+      "bot",
+      "sup",
+      "jungle",
+      "mid",
+      "top"
+    ],
+    "waitingTime": 130
+  },
+  {
+    "user_id": "44bb6004-4117-4a0c-ae77-aecf6a1f17a7",
+    "mmr": 1047,
+    "roles": [
+      "top",
+      "mid",
+      "sup",
+      "bot",
+      "jungle"
+    ],
+    "waitingTime": 158
+  },
+  {
+    "user_id": "2a56f514-53ea-4818-a06d-e836c28cae79",
+    "mmr": 1811,
+    "roles": [
+      "mid",
+      "top",
+      "bot",
+      "sup",
+      "jungle"
+    ],
+    "waitingTime": 35
+  },
+  {
+    "user_id": "eaf543d1-85ac-4eb6-b2eb-bca7996ea150",
+    "mmr": 2630,
+    "roles": [
+      "jungle",
+      "mid",
+      "sup",
+      "top",
+      "bot"
+    ],
+    "waitingTime": 157
+  },
+  {
+    "user_id": "d48ef34b-ca23-4248-b427-f9e93ace237b",
+    "mmr": 2197,
+    "roles": [
+      "bot",
+      "mid",
+      "top",
+      "jungle",
+      "sup"
+    ],
+    "waitingTime": 177
+  },
+  {
+    "user_id": "7fb405d6-f469-4086-a8f1-6c569d95e841",
+    "mmr": 1163,
+    "roles": [
+      "mid",
+      "jungle",
+      "top",
+      "sup",
+      "bot"
+    ],
+    "waitingTime": 200
+  },
+  {
+    "user_id": "76940534-d161-4f84-aef3-aee9170f4d7c",
+    "mmr": 2366,
+    "roles": [
+      "jungle",
+      "top",
+      "sup",
+      "bot",
+      "mid"
+    ],
+    "waitingTime": 37
+  },
+  {
+    "user_id": "2404c545-037b-4de4-9600-b1e73bba4b4e",
+    "mmr": 1963,
+    "roles": [
+      "mid",
+      "jungle",
+      "sup",
+      "top",
+      "bot"
+    ],
+    "waitingTime": 66
+  },
+  {
+    "user_id": "cc469aec-dd35-4cb5-bffe-6c060e2ce835",
+    "mmr": 654,
+    "roles": [
+      "jungle",
+      "bot",
+      "mid",
+      "top",
+      "sup"
+    ],
+    "waitingTime": 153
+  },
+  {
+    "user_id": "e64d4d4d-4e76-40ee-b7b8-8552a0f04808",
+    "mmr": 819,
+    "roles": [
+      "sup",
+      "mid",
+      "jungle",
+      "top",
+      "bot"
+    ],
+    "waitingTime": 171
+  },
+  {
+    "user_id": "abb7c142-8033-43e9-84bd-43a7474701a0",
+    "mmr": 826,
+    "roles": [
+      "top",
+      "bot",
+      "jungle",
+      "mid",
+      "sup"
+    ],
+    "waitingTime": 28
+  },
+  {
+    "user_id": "e401d552-d08a-4275-bf3e-b41411484c26",
+    "mmr": 1802,
+    "roles": [
+      "sup",
+      "bot",
+      "top",
+      "jungle",
+      "mid"
+    ],
+    "waitingTime": 48
+  },
+  {
+    "user_id": "e8baa7be-dc79-4672-bfe2-866302475e41",
+    "mmr": 1890,
+    "roles": [
+      "mid",
+      "top",
+      "bot",
+      "sup",
+      "jungle"
+    ],
+    "waitingTime": 152
+  },
+  {
+    "user_id": "1659fcdf-1305-4514-9a9d-feb09cb677d9",
+    "mmr": 1943,
+    "roles": [
+      "sup",
+      "jungle",
+      "bot",
+      "top",
+      "mid"
+    ],
+    "waitingTime": 86
+  },
+  {
+    "user_id": "00c1c074-4315-4254-a089-681f6b6deb54",
+    "mmr": 2171,
+    "roles": [
+      "bot",
+      "top",
+      "mid",
+      "sup",
+      "jungle"
+    ],
+    "waitingTime": 47
+  },
+  {
+    "user_id": "75fe16f1-910c-475d-af17-1a55bc56d4d1",
+    "mmr": 2406,
+    "roles": [
+      "jungle",
+      "sup",
+      "mid",
+      "bot",
+      "top"
+    ],
+    "waitingTime": 133
+  },
+  {
+    "user_id": "00919528-1334-49ef-8df6-1a4b1f3c69d5",
+    "mmr": 2888,
+    "roles": [
+      "jungle",
+      "mid",
+      "top",
+      "bot",
+      "sup"
+    ],
+    "waitingTime": 116
+  },
+  {
+    "user_id": "cad957fd-a977-4836-9d05-a1ae0fef0393",
+    "mmr": 2594,
+    "roles": [
+      "jungle",
+      "mid",
+      "sup",
+      "bot",
+      "top"
+    ],
+    "waitingTime": 73
+  },
+  {
+    "user_id": "b3b77150-303c-4938-a914-f6fc19173bf2",
+    "mmr": 2186,
+    "roles": [
+      "top",
+      "jungle",
+      "mid",
+      "sup",
+      "bot"
+    ],
+    "waitingTime": 133
+  },
+  {
+    "user_id": "2a445175-d0d5-4e86-8b53-4b8df62fe4c7",
+    "mmr": 2737,
+    "roles": [
+      "top",
+      "bot",
+      "mid",
+      "sup",
+      "jungle"
+    ],
+    "waitingTime": 68
+  },
+  {
+    "user_id": "97047645-79db-45e2-ba0d-753729968ae4",
+    "mmr": 1152,
+    "roles": [
+      "sup",
+      "top",
+      "jungle",
+      "bot",
+      "mid"
+    ],
+    "waitingTime": 155
+  },
+  {
+    "user_id": "b4d9d3c0-78fd-4efb-8525-af922bda3855",
+    "mmr": 1858,
+    "roles": [
+      "top",
+      "mid",
+      "jungle",
+      "bot",
+      "sup"
+    ],
+    "waitingTime": 70
+  },
+  {
+    "user_id": "074d8084-27cf-494f-a943-ab6c558a2c1c",
+    "mmr": 2268,
+    "roles": [
+      "bot",
+      "sup",
+      "top",
+      "jungle",
+      "mid"
+    ],
+    "waitingTime": 176
+  },
+  {
+    "user_id": "f1bebe5f-2e3e-4ad5-a42d-38e50a8aa2ce",
+    "mmr": 1005,
+    "roles": [
+      "sup",
+      "top",
+      "jungle",
+      "bot",
+      "mid"
+    ],
+    "waitingTime": 13
+  },
+  {
+    "user_id": "30273e1b-f3ab-4b2d-aed0-0cd7e80cc6ca",
+    "mmr": 1695,
+    "roles": [
+      "sup",
+      "bot",
+      "mid",
+      "jungle",
+      "top"
+    ],
+    "waitingTime": 133
+  },
+  {
+    "user_id": "bed6f38a-a749-415b-950b-e191560583c5",
+    "mmr": 826,
+    "roles": [
+      "top",
+      "jungle",
+      "mid",
+      "bot",
+      "sup"
+    ],
+    "waitingTime": 34
+  },
+  {
+    "user_id": "94588e83-9b8a-4eca-a5d0-c9b56b9caf1b",
+    "mmr": 2487,
+    "roles": [
+      "sup",
+      "top",
+      "jungle",
+      "bot",
+      "mid"
+    ],
+    "waitingTime": 33
+  },
+  {
+    "user_id": "6e4c615f-5d0f-419f-ad5f-a00b99eb8fa1",
+    "mmr": 887,
+    "roles": [
+      "bot",
+      "mid",
+      "sup",
+      "top",
+      "jungle"
+    ],
+    "waitingTime": 64
+  },
+  {
+    "user_id": "383c0a47-22a6-42b8-b849-9f86e73304ef",
+    "mmr": 2737,
+    "roles": [
+      "bot",
+      "mid",
+      "top",
+      "jungle",
+      "sup"
+    ],
+    "waitingTime": 155
+  },
+  {
+    "user_id": "3a3dc40b-b319-45ea-a700-9bde1f46dc30",
+    "mmr": 1208,
+    "roles": [
+      "jungle",
+      "bot",
+      "sup",
+      "top",
+      "mid"
+    ],
+    "waitingTime": 53
+  },
+  {
+    "user_id": "7e7f2a06-0968-4f65-9710-ff269ce8c68d",
+    "mmr": 2983,
+    "roles": [
+      "bot",
+      "top",
+      "sup",
+      "jungle",
+      "mid"
+    ],
+    "waitingTime": 162
+  },
+  {
+    "user_id": "7c2c39b3-14ad-4e0e-a1dd-72ba0e95b0da",
+    "mmr": 930,
+    "roles": [
+      "sup",
+      "jungle",
+      "top",
+      "bot",
+      "mid"
+    ],
+    "waitingTime": 23
+  },
+  {
+    "user_id": "6c1102e5-64ba-406c-a810-56f7455c9861",
+    "mmr": 2846,
+    "roles": [
+      "sup",
+      "top",
+      "mid",
+      "bot",
+      "jungle"
+    ],
+    "waitingTime": 81
+  },
+  {
+    "user_id": "7307e117-62a1-4021-a1f6-46e9bdaba386",
+    "mmr": 1033,
+    "roles": [
+      "top",
+      "bot",
+      "mid",
+      "sup",
+      "jungle"
+    ],
+    "waitingTime": 20
+  },
+  {
+    "user_id": "f81544ca-8f11-41b8-8029-18dbef475365",
+    "mmr": 2028,
+    "roles": [
+      "sup",
+      "bot",
+      "jungle",
+      "mid",
+      "top"
+    ],
+    "waitingTime": 187
+  },
+  {
+    "user_id": "8f572bea-3e06-4e71-b30f-a4474d1f959f",
+    "mmr": 879,
+    "roles": [
+      "mid",
+      "bot",
+      "top",
+      "jungle",
+      "sup"
+    ],
+    "waitingTime": 8
+  },
+  {
+    "user_id": "e6b6bf5e-4671-43f6-ba4c-8d1e4a7ad66b",
+    "mmr": 2082,
+    "roles": [
+      "bot",
+      "top",
+      "mid",
+      "jungle",
+      "sup"
+    ],
+    "waitingTime": 131
+  },
+  {
+    "user_id": "d186f3a3-74bd-4ac5-8a3a-09e6728fb7ea",
+    "mmr": 1196,
+    "roles": [
+      "sup",
+      "mid",
+      "bot",
+      "top",
+      "jungle"
+    ],
+    "waitingTime": 74
+  },
+  {
+    "user_id": "867a68cf-8d8b-419c-9051-df14aff4e2bb",
+    "mmr": 2751,
+    "roles": [
+      "sup",
+      "jungle",
+      "top",
+      "mid",
+      "bot"
+    ],
+    "waitingTime": 137
+  },
+  {
+    "user_id": "f474970d-c678-4325-bae4-701deb6c46c5",
+    "mmr": 2876,
+    "roles": [
+      "jungle",
+      "sup",
+      "mid",
+      "top",
+      "bot"
+    ],
+    "waitingTime": 88
+  },
+  {
+    "user_id": "d9774a04-8f75-4bb2-8177-4b5d53dba05c",
+    "mmr": 2526,
+    "roles": [
+      "bot",
+      "jungle",
+      "mid",
+      "sup",
+      "top"
+    ],
+    "waitingTime": 11
+  },
+  {
+    "user_id": "3992d216-c25e-49ee-8b94-f1237ef73949",
+    "mmr": 1951,
+    "roles": [
+      "jungle",
+      "bot",
+      "top",
+      "sup",
+      "mid"
+    ],
+    "waitingTime": 26
+  },
+  {
+    "user_id": "66ab1ff4-f652-4695-b2d4-af01a7acbe89",
+    "mmr": 1919,
+    "roles": [
+      "bot",
+      "top",
+      "mid",
+      "sup",
+      "jungle"
+    ],
+    "waitingTime": 60
+  },
+  {
+    "user_id": "66fbaeb2-48bc-41ce-90de-08e1b937785e",
+    "mmr": 2306,
+    "roles": [
+      "mid",
+      "jungle",
+      "sup",
+      "bot",
+      "top"
+    ],
+    "waitingTime": 74
+  },
+  {
+    "user_id": "a0613e11-fb8c-48d3-a403-5eff98a13ede",
+    "mmr": 2116,
+    "roles": [
+      "jungle",
+      "top",
+      "sup",
+      "bot",
+      "mid"
+    ],
+    "waitingTime": 147
+  },
+  {
+    "user_id": "66e026dd-3784-41b5-8897-33be39c59865",
+    "mmr": 1232,
+    "roles": [
+      "top",
+      "sup",
+      "jungle",
+      "mid",
+      "bot"
+    ],
+    "waitingTime": 28
+  },
+  {
+    "user_id": "a0d83ce5-ab6a-46d6-b5eb-c1b7eec507bb",
+    "mmr": 687,
+    "roles": [
+      "bot",
+      "mid",
+      "sup",
+      "top",
+      "jungle"
+    ],
+    "waitingTime": 142
+  },
+  {
+    "user_id": "11394c08-33dc-4ca6-9100-4f3a6ef43cf4",
+    "mmr": 2396,
+    "roles": [
+      "top",
+      "bot",
+      "jungle",
+      "mid",
+      "sup"
+    ],
+    "waitingTime": 170
+  },
+  {
+    "user_id": "1b9aaa2c-3933-4fe3-b5e8-3a10f5d8a446",
+    "mmr": 2781,
+    "roles": [
+      "mid",
+      "jungle",
+      "bot",
+      "sup",
+      "top"
+    ],
+    "waitingTime": 29
+  },
+  {
+    "user_id": "84bcbf1a-553a-4798-9b75-4ce519e2aaba",
+    "mmr": 1931,
+    "roles": [
+      "sup",
+      "bot",
+      "jungle",
+      "top",
+      "mid"
+    ],
+    "waitingTime": 6
+  },
+  {
+    "user_id": "a8351577-567e-48e0-853f-9d113279a537",
+    "mmr": 1538,
+    "roles": [
+      "sup",
+      "bot",
+      "mid",
+      "top",
+      "jungle"
+    ],
+    "waitingTime": 177
+  },
+  {
+    "user_id": "f53bc592-247e-4051-bc14-fae38713357c",
+    "mmr": 2623,
+    "roles": [
+      "sup",
+      "bot",
+      "jungle",
+      "top",
+      "mid"
+    ],
+    "waitingTime": 105
+  },
+  {
+    "user_id": "02c2cb9b-fbe0-4071-b859-6f03ed0c716f",
+    "mmr": 2127,
+    "roles": [
+      "sup",
+      "jungle",
+      "top",
+      "bot",
+      "mid"
+    ],
+    "waitingTime": 172
+  },
+  {
+    "user_id": "61f5778d-499f-4dbc-bcc2-63aa48626d72",
+    "mmr": 1227,
+    "roles": [
+      "bot",
+      "mid",
+      "sup",
+      "jungle",
+      "top"
+    ],
+    "waitingTime": 65
+  },
+  {
+    "user_id": "f44156b7-12bf-4bdf-b1f3-6dea547aff07",
+    "mmr": 1204,
+    "roles": [
+      "top",
+      "mid",
+      "sup",
+      "jungle",
+      "bot"
+    ],
+    "waitingTime": 158
+  },
+  {
+    "user_id": "474264b9-0d24-4b16-9bde-c8e5501d45b3",
+    "mmr": 1717,
+    "roles": [
+      "bot",
+      "sup",
+      "jungle",
+      "top",
+      "mid"
+    ],
+    "waitingTime": 64
+  },
+  {
+    "user_id": "6289307b-1c4c-4ec3-b248-8cc3329cdad1",
+    "mmr": 1969,
+    "roles": [
+      "jungle",
+      "mid",
+      "sup",
+      "top",
+      "bot"
+    ],
+    "waitingTime": 31
+  },
+  {
+    "user_id": "ee6d4f5b-3be6-4172-bf41-f3ae3c546dfb",
+    "mmr": 682,
+    "roles": [
+      "sup",
+      "jungle",
+      "mid",
+      "bot",
+      "top"
+    ],
+    "waitingTime": 65
+  },
+  {
+    "user_id": "894db3b4-613a-45ea-a2a7-d67a7cbb51c8",
+    "mmr": 2821,
+    "roles": [
+      "sup",
+      "bot",
+      "top",
+      "mid",
+      "jungle"
+    ],
+    "waitingTime": 92
+  },
+  {
+    "user_id": "80c6c70b-ba11-438c-84c5-31b7c291953b",
+    "mmr": 2716,
+    "roles": [
+      "sup",
+      "jungle",
+      "bot",
+      "mid",
+      "top"
+    ],
+    "waitingTime": 78
+  },
+  {
+    "user_id": "12f56630-15ea-48ff-9fb4-20eb29fd1e39",
+    "mmr": 2565,
+    "roles": [
+      "bot",
+      "jungle",
+      "top",
+      "mid",
+      "sup"
+    ],
+    "waitingTime": 66
+  },
+  {
+    "user_id": "dd540ebb-628d-4c36-8a36-a8555c9e9aaa",
+    "mmr": 2280,
+    "roles": [
+      "mid",
+      "sup",
+      "bot",
+      "jungle",
+      "top"
+    ],
+    "waitingTime": 191
+  },
+  {
+    "user_id": "a392a1e6-3236-49c6-b234-96c7843ad9c8",
+    "mmr": 760,
+    "roles": [
+      "jungle",
+      "bot",
+      "mid",
+      "sup",
+      "top"
+    ],
+    "waitingTime": 40
+  },
+  {
+    "user_id": "5adf1b5e-cf11-4edb-9632-807898ebe456",
+    "mmr": 2388,
+    "roles": [
+      "bot",
+      "top",
+      "mid",
+      "jungle",
+      "sup"
+    ],
+    "waitingTime": 46
+  },
+  {
+    "user_id": "3b5507b5-9a60-42a8-9f81-cdeaa88c65da",
+    "mmr": 1719,
+    "roles": [
+      "jungle",
+      "sup",
+      "top",
+      "bot",
+      "mid"
+    ],
+    "waitingTime": 18
+  },
+  {
+    "user_id": "217946f8-ff8e-4471-96af-90bf5387ef64",
+    "mmr": 668,
+    "roles": [
+      "top",
+      "jungle",
+      "sup",
+      "bot",
+      "mid"
+    ],
+    "waitingTime": 60
+  },
+  {
+    "user_id": "dc8bbfb7-cf7e-4a7f-935f-bc3c771e1f37",
+    "mmr": 2735,
+    "roles": [
+      "bot",
+      "mid",
+      "sup",
+      "top",
+      "jungle"
+    ],
+    "waitingTime": 167
+  },
+  {
+    "user_id": "f96b155f-553b-4d2e-8bc1-d5dd6edb3a29",
+    "mmr": 1829,
+    "roles": [
+      "sup",
+      "jungle",
+      "mid",
+      "bot",
+      "top"
+    ],
+    "waitingTime": 45
+  },
+  {
+    "user_id": "ba78caec-85cd-4435-8678-6aec46e56817",
+    "mmr": 2706,
+    "roles": [
+      "jungle",
+      "sup",
+      "mid",
+      "top",
+      "bot"
+    ],
+    "waitingTime": 165
+  },
+  {
+    "user_id": "72f4f27d-8e28-49b6-b766-759724b1c4a8",
+    "mmr": 1582,
+    "roles": [
+      "jungle",
+      "top",
+      "mid",
+      "bot",
+      "sup"
+    ],
+    "waitingTime": 7
+  },
+  {
+    "user_id": "9bfa0d22-cbb1-4704-9a5f-42fa6656c872",
+    "mmr": 1144,
+    "roles": [
+      "top",
+      "jungle",
+      "mid",
+      "sup",
+      "bot"
+    ],
+    "waitingTime": 120
+  },
+  {
+    "user_id": "d1e0411d-fbef-448a-a23c-8c73d8674b34",
+    "mmr": 1228,
+    "roles": [
+      "sup",
+      "mid",
+      "jungle",
+      "top",
+      "bot"
+    ],
+    "waitingTime": 193
+  },
+  {
+    "user_id": "5874396d-bd01-462f-9b41-16add2f71e5f",
+    "mmr": 748,
+    "roles": [
+      "bot",
+      "sup",
+      "mid",
+      "top",
+      "jungle"
+    ],
+    "waitingTime": 32
+  },
+  {
+    "user_id": "68e27791-31d4-47f8-8ef9-5ae25c74ccca",
+    "mmr": 508,
+    "roles": [
+      "bot",
+      "sup",
+      "jungle",
+      "mid",
+      "top"
+    ],
+    "waitingTime": 66
+  },
+  {
+    "user_id": "ea2d24f5-7461-4be9-9072-6582abd75465",
+    "mmr": 1631,
+    "roles": [
+      "mid",
+      "bot",
+      "top",
+      "sup",
+      "jungle"
+    ],
+    "waitingTime": 52
+  },
+  {
+    "user_id": "fd8213b3-c23d-4de5-8189-80f723452fa1",
+    "mmr": 2097,
+    "roles": [
+      "top",
+      "mid",
+      "sup",
+      "jungle",
+      "bot"
+    ],
+    "waitingTime": 96
+  },
+  {
+    "user_id": "7a1d3916-09f0-4244-ac5f-9a940c7d114e",
+    "mmr": 1087,
+    "roles": [
+      "top",
+      "sup",
+      "jungle",
+      "bot",
+      "mid"
+    ],
+    "waitingTime": 197
+  },
+  {
+    "user_id": "ede51b2b-c2f0-44dc-ac66-d2c55d1ae57b",
+    "mmr": 2606,
+    "roles": [
+      "top",
+      "mid",
+      "bot",
+      "jungle",
+      "sup"
+    ],
+    "waitingTime": 147
+  },
+  {
+    "user_id": "32d66289-7f6c-4b7a-8857-e3e0ac760686",
+    "mmr": 2898,
+    "roles": [
+      "mid",
+      "top",
+      "sup",
+      "jungle",
+      "bot"
+    ],
+    "waitingTime": 77
+  },
+  {
+    "user_id": "87f4d869-7cb2-4a69-aeca-9457b72116b9",
+    "mmr": 1901,
+    "roles": [
+      "sup",
+      "top",
+      "jungle",
+      "bot",
+      "mid"
+    ],
+    "waitingTime": 133
+  }
+]
