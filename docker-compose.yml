@@ -13,5 +13,5 @@ services:
   solution:
     build:
       context: matchmaking/solution
-    command: /bin/sh -c "sleep 5 && python app.py"
+    command: /bin/sh -c "sleep 5 && /bin/server"
     stop_signal: SIGINT
