@@ -28,7 +28,7 @@ pub fn get(test_name: &str, input_epoch: Option<Epoch>) {
             let url = get_url_params(
                 "/matchmaking/users",
                 vec![
-                    ("test_name", "test_0"),
+                    ("test_name", test_name),
                     ("epoch", &epoch_ref.repr())
                 ]
             );
@@ -38,7 +38,7 @@ pub fn get(test_name: &str, input_epoch: Option<Epoch>) {
                     if response.status().is_success() {
                         match response.json::<Vec<User>>() {
                             Ok(users) => {
-                                debug!("Got users from {}:\n {:?}", url, users);
+                                debug!("Got {} users from {}", users.len(), url);
                             },
                             Err(e) => {
                                 error!("Failed to parse JSON response from {}: {}", url, e);
