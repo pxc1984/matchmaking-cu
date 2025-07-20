@@ -33,6 +33,11 @@ fn main() {
 
     info!("Connection to test system running on {} set up successfully", SERVER_NAME);
 
-    // test get_waiting_users
-    get_waiting_users::get("test_0", None);
+    for test_number in 0..20 {
+        let users = get_waiting_users::get(&test_name_from_int(test_number), None);
+    }
+}
+
+fn test_name_from_int(test_number: u32) -> String {
+    "test_".to_string() + &test_number.to_string()
 }

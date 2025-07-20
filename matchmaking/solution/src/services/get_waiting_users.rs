@@ -3,7 +3,7 @@ use tracing::{debug, error, info, warn};
 use tracing_subscriber;
 
 use std::thread;
-use std::sync::{ Arc, Mutex };
+use std::sync::{Arc, Mutex, MutexGuard};
 use std::time::{
     Duration,
 };
@@ -15,9 +15,11 @@ use super::epoch::*;
 use super::get_url::*;
 use super::*;
 
-pub fn get(test_name: &str, input_epoch: Option<Epoch>) {
+pub fn get(test_name: &str, input_epoch: Option<Epoch>) -> Vec<User> {
     let client = Arc::new(Client::new());
     let epoch = Arc::new(input_epoch.unwrap_or_else(|| Epoch::new()));
+
+    let users: Arc<Mutex<Vec<User>>> = Arc::new(Mutex::new(Vec::new()));
 
     thread::scope(|s| {
         let client_ref = Arc::clone(&client);
@@ -37,9 +39,14 @@ pub fn get(test_name: &str, input_epoch: Option<Epoch>) {
                 Ok(response) => {
                     if response.status().is_success() {
                         match response.json::<Vec<User>>() {
-                            Ok(users) => {
-                                debug!("Got {} users from {}", users.len(), url);
-                            },
+                            Ok(parsed_users) => {
+                                debug!("Got {} users from {}", parsed_users.len(), url);
+
+                                let mut users_ref = Arc::clone(&users)
+                                    .lock()
+                                    .expect("failed to unwrap users_ref lock");
+                                *users_ref.extend(parsed_users);
+                            }
                             Err(e) => {
                                 error!("Failed to parse JSON response from {}: {}", url, e);
                             }
@@ -56,4 +63,9 @@ pub fn get(test_name: &str, input_epoch: Option<Epoch>) {
             }
         });
     });
+
+    Arc::clone(&users)
+        .lock()
+        .expect("failed to unwrap ret lock")
+        .clone()
 }
