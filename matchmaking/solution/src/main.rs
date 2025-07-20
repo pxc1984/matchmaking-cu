@@ -39,6 +39,7 @@ fn main() {
         let mut epoch = Epoch::new();
         while running {
             let test_name = test_name_from_int(test_number);
+            info!("Running test #{} with epoch {}", test_number, epoch);
             let users = get_waiting_users::get(
                 &test_name,
                 Some(epoch.clone())
