@@ -10,16 +10,16 @@ use std::time::{
 use reqwest::blocking::*;
 use serde_json;
 
-use crate::models::user::User;
+use crate::models::user::UserData;
 use super::epoch::*;
 use super::get_url::*;
 use super::*;
 
-pub fn get(test_name: &str, input_epoch: Option<Epoch>) -> Vec<User> {
+pub fn get(test_name: &str, input_epoch: Option<Epoch>) -> Vec<UserData> {
     let client = Arc::new(Client::new());
     let epoch = Arc::new(input_epoch.unwrap_or_else(|| Epoch::new()));
 
-    let users: Arc<Mutex<Vec<User>>> = Arc::new(Mutex::new(vec![]));
+    let users: Arc<Mutex<Vec<UserData>>> = Arc::new(Mutex::new(vec![]));
 
     thread::scope(|s| {
         s.spawn(|| {
@@ -38,7 +38,7 @@ pub fn get(test_name: &str, input_epoch: Option<Epoch>) -> Vec<User> {
             match client_ref.get(&url).send() {
                 Ok(response) => {
                     if response.status().is_success() {
-                        match response.json::<Vec<User>>() {
+                        match response.json::<Vec<UserData>>() {
                             Ok(parsed_users) => {
                                 debug!("Got {} users from {}", parsed_users.len(), url);
 

@@ -8,10 +8,11 @@ services:
     ports:
       - '8000:8000'
     volumes:
-      - './logs:/matchmaking/server/secret_tests/logs'
+      - './logs:/matchmaking/server/tests/logs'
 
   solution:
     build:
       context: matchmaking/solution
-    command: /bin/sh -c "sleep 5 && /bin/server"
+    environment:
+      SERVER_NAME: server:8000
     stop_signal: SIGINT

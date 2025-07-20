@@ -1,7 +1,10 @@
-﻿use serde::{
+﻿use std::collections::HashMap;
+use serde::{
     Deserialize,
     Serialize,
 };
+use uuid::Uuid;
+use crate::models::user::UserData;
 use crate::services::epoch::Epoch;
 
 #[derive(Deserialize)]
@@ -10,20 +13,38 @@ pub struct SubmitTeamsResponse {
     pub is_last_epoch: bool,
 }
 
-#[derive(Serialize)]
+#[derive(Serialize, Clone)]
 pub struct UserRole {
-    id: String,
-    role: String,
+    pub id: uuid::Uuid,
+    pub role: String,
+}
+
+pub trait GetInfo {
+    fn get(&self, data: &HashMap<Uuid, UserData>) -> UserData;
 }
 
 #[derive(Serialize)]
+pub struct TeamResponse {
+    pub side: String,
+    pub users: Vec<UserRole>,
+}
+
+#[derive(Clone)]
 pub struct Team {
-    side: String,
-    users: Vec<UserRole>,
+    pub side: String,
+    pub users: HashMap<String, UserData>,
+}
+
+pub trait SkillMedian {
+    fn calc_skill_median(&self, _data: &HashMap<Uuid, UserData>) -> f64;
 }
 
 #[derive(Serialize)]
 pub struct Match {
-    match_id: String,
-    teams: Vec<Team>,
+    pub match_id: String,
+    pub teams: Vec<TeamResponse>,
+}
+
+pub trait Fairness {
+    fn calc_fairness(&self, data: &HashMap<Uuid, UserData>) -> i64;
 }

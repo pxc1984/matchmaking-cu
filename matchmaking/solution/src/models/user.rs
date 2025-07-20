@@ -2,10 +2,10 @@
 use uuid;
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
-pub struct User {
-    mmr: u64,
-    roles: Vec<String>,
-    user_id: uuid::Uuid,
+pub struct UserData {
+    pub mmr: u32,
+    pub roles: Vec<String>,
+    pub user_id: uuid::Uuid,
     #[serde(rename = "waitingTime")]
-    waiting_time: u32,
+    pub waiting_time: u32,
 }

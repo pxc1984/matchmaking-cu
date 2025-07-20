@@ -1,7 +1,7 @@
 ﻿use crate::constants::*;
 
 pub fn get_url(endpoint_path: &str) -> String {
-    String::from("http://") + SERVER_NAME + endpoint_path
+    String::from("http://") + &SERVER_NAME + endpoint_path
 }
 
 pub fn get_url_params(endpoint_path: &str, params: Vec<(&str, &str)>) -> String {

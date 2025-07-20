@@ -32,5 +32,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: secret-tests-${{ github.REPOSITORY_ID }}
-          path: ./logs/result.csv
+          path: ./tests/result.csv
           if-no-files-found: error
