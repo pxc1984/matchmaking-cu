@@ -10,6 +10,7 @@ pub static SERVER_NAME: LazyLock<String> = LazyLock::new(|| match env::var("SERV
 // --- Банальные константы чтоб не хардкодить ---
 pub const TEAM_SIZE: usize = 5;
 pub const PLAYERS_PER_MATCH: usize = TEAM_SIZE * 2;
+pub const THREAD_COUNT: usize = 20;
 
 // --- Пул потенциальных решений ---
 /// Берет N лучших игроков для каждой роли для матча
