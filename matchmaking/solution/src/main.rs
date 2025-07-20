@@ -32,7 +32,7 @@ fn main() {
         return;
     }
 
-    info!("Connection to test system running on {} set up successfully", SERVER_NAME);
+    info!("Connection to test system running on {} set up successfully", SERVER_NAME.to_string());
 
     for test_number in 0..20 {
         let mut running = true;

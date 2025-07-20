@@ -4,7 +4,7 @@ services:
       context: matchmaking/server
       target: builder
     stop_signal: SIGINT
-#    hostname: server
+    hostname: server
     ports:
       - '8000:8000'
     volumes:
@@ -13,4 +13,6 @@ services:
   solution:
     build:
       context: matchmaking/solution
+    environment:
+      SERVER_NAME: server:8000
     stop_signal: SIGINT

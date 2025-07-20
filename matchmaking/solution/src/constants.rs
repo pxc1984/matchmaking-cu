@@ -1,5 +1,13 @@
-﻿/// Где находится тестирующая система?
-pub const SERVER_NAME: &str = "127.0.0.1:8000";
+﻿use std::env;
+use std::env::VarError;
+use std::sync::LazyLock;
+
+/// Где находится тестирующая система?
+// pub const SERVER_NAME: &str = "127.0.0.1:8000";
+pub static SERVER_NAME: LazyLock<String> = LazyLock::new(|| match env::var("SERVER_NAME") {
+    Ok(val) => { val.clone() }
+    Err(_) => { "127.0.0.1:8000".to_string() }
+});
 // --- Банальные константы чтоб не хардкодить ---
 pub const TEAM_SIZE: usize = 5;
 pub const PLAYERS_PER_MATCH: usize = TEAM_SIZE * 2;
