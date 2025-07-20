@@ -1,4 +1,6 @@
 ﻿use std::collections::HashMap;
+use rand::Rng;
+use rand::prelude::*;
 use uuid::Uuid;
 use crate::constants::*;
 use crate::models::submit::*;
@@ -7,60 +9,61 @@ use crate::models::user::UserData;
 /// Функция, которая распределяет пользователей по командам в зависимости от их:
 /// - рейтинга (ММР)
 /// - предпочитаемых позиций
-/// - того, сколько времени они ждали
-pub fn determine(_users: &Vec<UserData>) -> Vec<Match> {
-    let _users_data = users_to_data(_users.clone());
-
-    let mut available_users = _users.clone();
-
-    // Сортируем пользователей по ММР по убыванию
-    available_users.sort_by(|a, b| b.mmr.cmp(&a.mmr));
-
+/// TODO: - того, сколько времени они ждали
+pub fn determine(all_users: &Vec<UserData>) -> Vec<Match> {
     let mut formed_matches: Vec<Match> = Vec::new();
+    let mut users_by_role: HashMap<String, Vec<UserData>> = users_by_role(&all_users);
 
-    while available_users.len() >= PLAYERS_PER_MATCH {
-        let mut team1_players: Vec<UserRole> = Vec::with_capacity(TEAM_SIZE);
-        let mut team2_players: Vec<UserRole> = Vec::with_capacity(TEAM_SIZE);
+    // Сортируем каждую роль по ММР
+    for players in users_by_role.values_mut() {
+        players.sort_by(|a, b| b.mmr.cmp(&a.mmr));
+    }
 
-        for i in 0..PLAYERS_PER_MATCH {
-            let user = available_users.remove(0);
-
-            let user_role = UserRole {
-                id: user.user_id,
-                role: user.roles.get(0).cloned().unwrap(),
-            };
-
-            if i % 4 == 0 || i % 4 == 3 {
-                team1_players.push(user_role);
-            } else {
-                team2_players.push(user_role);
+    loop {
+        // Проверяем, есть ли у нас достаточно игроков для одного матча (хотяб 2е на каждую роль)
+        if users_by_role.values().any(|v| v.len() < 2) || users_by_role.len() < TEAM_SIZE {
+            break; // Недостаточно игроков даже на один нормальный матч
+        }
+        let mut candidate_pool: HashMap<String, Vec<UserData>> = HashMap::new();
+        for (role, players) in &users_by_role {
+            let candidates: Vec<UserData> = players.iter().take(CANDIDATES_PER_ROLE).cloned().collect();
+            if candidates.len() < 2 {
+                // На случай если очередь иссякнет
+                return formed_matches;
             }
+            candidate_pool.insert(role.clone(), candidates);
         }
 
-        // Условные обозначения: первая команда - красная, вторая команда - синяя
+        // --- Simulated Annealing чтоб найти лучший матч ---
+        let (best_team1, best_team2) = find_best_teams(&candidate_pool);
+
+        // --- Фигня для нетворкинга и тестирующей системы ---
+        let match_players_ids: Vec<Uuid> = best_team1.users.values().chain(best_team2.users.values()).map(|p| p.user_id).collect();
+
         let team1_response = TeamResponse {
             side: "red".to_string(),
-            users: team1_players,
+            users: best_team1.users.iter().map(|(role, user)| UserRole { id: user.user_id, role: role.clone() }).collect(),
         };
         let team2_response = TeamResponse {
             side: "blue".to_string(),
-            users: team2_players,
+            users: best_team2.users.iter().map(|(role, user)| UserRole { id: user.user_id, role: role.clone() }).collect(),
         };
 
-        let new_match = Match {
+        formed_matches.push(Match {
             match_id: Uuid::new_v4().to_string(),
             teams: vec![team1_response, team2_response],
-        };
+        });
 
-        // Реализован чистый жадный алгоритм, в нем мы все принимаем.
-        // Если будешь делать более продвинутый алгоритм, то на этом шаге надо подсчитывать
-        // честность и потенциально отклонять матч или пытаться пересоставить его, если он слишком имба.
-        formed_matches.push(new_match);
+        // Удаляем уже выбранных игроков из очередей
+        for (role, players) in users_by_role.iter_mut() {
+            players.retain(|p| !match_players_ids.contains(&p.user_id));
+        }
     }
 
     formed_matches
 }
 
+/// Переводим список пользователей в словарь по их уникальному айди
 fn users_to_data(users: Vec<UserData>) -> HashMap<Uuid, UserData> {
     let mut data = HashMap::new();
     for user in users {
@@ -69,18 +72,24 @@ fn users_to_data(users: Vec<UserData>) -> HashMap<Uuid, UserData> {
     data
 }
 
-
-impl GetInfo for UserRole {
-    /// get the entry from `data` where user_id is the same as `self.id`
-    fn get(&self, user_data: &HashMap<Uuid, UserData>) -> UserData {
-        user_data.get(&self.id).unwrap().clone()
+/// Группируем пользователей по их предпочтительной роли
+fn users_by_role(users: &Vec<UserData>) -> HashMap<String, Vec<UserData>> {
+    let mut users_by_role = HashMap::new();
+    for user in users.iter() {
+        if let Some(primary_role) = user.roles.first() {
+            users_by_role
+                .entry(primary_role.clone())
+                .or_default()
+                .push(user.clone());
+        }
     }
+    users_by_role
 }
 
-fn get_median(list: Vec<u32>) -> f64
-{
+/// Просто подсчет медианного значения из списка
+fn get_median(list: &Vec<u32>) -> f64 {
     if list.is_empty() { return f64::NAN; }
-    let mut list = list;
+    let mut list = list.clone();
     list.sort();
     if list.len() % 2 == 1 {
         list[list.len() / 2 + 1].clone() as f64
@@ -89,75 +98,123 @@ fn get_median(list: Vec<u32>) -> f64
     }
 }
 
-impl SkillMedian for TeamResponse {
-    fn calc_skill_median(&self, _data: &HashMap<Uuid, UserData>) -> f64 {
-        let mut skill_levels: Vec<u32> = Vec::with_capacity(self.users.len());
-        for user in &self.users {
-            let data = user.clone().get(&_data).clone();
-            skill_levels.push(data.mmr);
+/// Подсчитывает сумму модулей разностей ММР для каждой роли.
+fn calc_skill_delta_by_role(team1: &Team, team2: &Team) -> i64 {
+    let mut total_delta: i64 = 0;
+    for (role, player1) in &team1.users {
+        if let Some(player2) = team2.users.get(role) {
+            total_delta += (player1.mmr as i64 - player2.mmr as i64).abs();
         }
-        get_median(skill_levels.clone())
     }
+    total_delta
 }
 
-impl SkillMedian for Team {
-    fn calc_skill_median(&self, _data: &HashMap<Uuid, UserData>) -> f64 {
-        let skill_levels: Vec<u32> = self.users.iter()
-            .map(|user| user.mmr)
-            .collect();
-        get_median(skill_levels.clone())
-    }
+/// Подсчитывает честность для потенциального матча. Чем меньше, тем лучше.
+/// Это наша функция стоимости для оптимизации.
+fn calculate_match_fairness(team1: &Team, team2: &Team) -> f64 {
+    let team1_mmrs: Vec<u32> = team1.users.values().map(|p| p.mmr).collect();
+    let team2_mmrs: Vec<u32> = team2.users.values().map(|p| p.mmr).collect();
+
+    let role_delta = calc_skill_delta_by_role(team1, team2) as f64;
+    let median_delta = (get_median(&team1_mmrs) - get_median(&team2_mmrs)).abs();
+
+    // Это генеральный рейтинг того, насколько матч честный. Чем меньше тем лучше
+    role_delta + median_delta
 }
 
-fn calc_skill_delta_by_role(
-    team1: &TeamResponse,
-    team2: &TeamResponse,
-    user_data: &HashMap<Uuid, UserData>
-) -> i64 {
-    let mut team1_role = HashMap::new();
-    let mut role_delta = HashMap::new();
-    for user in team1.users.clone() {
-        let data = user.get(&user_data);
-        team1_role.insert(user.role, data.mmr);
-    }
-    for user in team2.users.clone() {
-        let data = user.get(&user_data);
-        let entry = team1_role.get(&user.role).expect("found role that didn't match").clone();
-        role_delta.insert(
-            user.role,
-            match entry > data.mmr {
-                true => {entry as i64 - data.mmr as i64}
-                false => {data.mmr as i64 - entry as i64}
-            }
-        );
+/// Ядро оптимизации матчей с использованием алгоритма (Simulated Annealing)[https://en.wikipedia.org/wiki/Simulated_annealing]
+fn find_best_teams(candidate_pool: &HashMap<String, Vec<UserData>>) -> (Team, Team) {
+    let mut rng = rand::rng();
+
+    let mut current_temp = INITIAL_TEMP;
+
+    // 1. Создаем случайную расстановку
+    let (mut current_team1, mut current_team2) = create_random_teams(candidate_pool, &mut rng);
+    let mut current_fairness = calculate_match_fairness(&current_team1, &current_team2);
+
+    let mut best_team1 = current_team1.clone();
+    let mut best_team2 = current_team2.clone();
+    let mut best_fairness = current_fairness;
+
+    for _ in 0..ITERATIONS {
+        if current_temp <= 1.0 { break; }
+
+        // 2. Создаем "соседское" решение путем добавления маленького изменения
+        let (next_team1, next_team2) = create_neighbor(&current_team1, &current_team2, candidate_pool, &mut rng);
+        let next_fairness = calculate_match_fairness(&next_team1, &next_team2);
+
+        // 3. Решаем, оставить старое или переключиться на новое решение
+        if next_fairness < current_fairness || rng.random::<f64>() < ((current_fairness - next_fairness) / current_temp).exp() {
+            current_team1 = next_team1;
+            current_team2 = next_team2;
+            current_fairness = next_fairness;
+        }
+
+        // Помним наилучшее решение из всех что находили
+        if current_fairness < best_fairness {
+            best_fairness = current_fairness;
+            best_team1 = current_team1.clone();
+            best_team2 = current_team2.clone();
+        }
+
+        current_temp *= COOLING_RATE;
     }
 
-    role_delta
-        .iter()
-        .map(|(key, value)| {
-            value
-        })
-        .sum()
+    (best_team1, best_team2)
 }
 
-fn calc_team_delta(
-    team1: &TeamResponse,
-    team2: &TeamResponse,
-    user_data: &HashMap<Uuid, UserData>
-) -> i64 {
-    calc_skill_delta_by_role(&team1, &team2, &user_data).abs()
-        + (team1.calc_skill_median(&user_data) - team2.calc_skill_median(&user_data)).abs() as i64
+/// Создает 2 корректные команды путем выбора случайных игроков из пула.
+fn create_random_teams(pool: &HashMap<String, Vec<UserData>>, rng: &mut impl Rng) -> (Team, Team) {
+    let mut team1 = Team {
+        side: "red".to_string(),
+        users: HashMap::new(),
+    };
+    let mut team2 = Team {
+        side: "blue".to_string(),
+        users: HashMap::new(),
+    };
+
+    for (role, candidates) in pool {
+        let chosen_pair: Vec<_> = candidates.choose_multiple(rng, 2).cloned().collect();
+        team1.users.insert(role.clone(), chosen_pair[0].clone());
+        team2.users.insert(role.clone(), chosen_pair[1].clone());
+    }
+    (team1, team2)
 }
 
-impl Fairness for Match {
-    fn calc_fairness(&self, data: &HashMap<Uuid, UserData>) -> i64 {
-        assert_eq!(self.teams.len(), 2);
-        calc_team_delta(
-            &self.teams[0],
-            &self.teams[1],
-            &data,
-        )
+/// Создает потенциальное решение путем изменения текущего.
+fn create_neighbor(team1: &Team, team2: &Team, pool: &HashMap<String, Vec<UserData>>, rng: &mut impl Rng) -> (Team, Team) {
+    let mut new_team1 = team1.clone();
+    let mut new_team2 = team2.clone();
+
+    // Выбираем случайную роль, чтоб изменить
+    let roles: Vec<_> = pool.keys().collect();
+    let role_to_swap = roles.choose(rng).unwrap();
+
+    // 50% шанс просто поменять игроков командами
+    if rng.random::<bool>() {
+        let player1 = new_team1.users.get(role_to_swap.clone()).unwrap().clone();
+        let player2 = new_team2.users.get(role_to_swap.clone()).unwrap().clone();
+        new_team1.users.insert((*role_to_swap).clone(), player2);
+        new_team2.users.insert((*role_to_swap).clone(), player1);
     }
+    // 50% шанс поменять игрока на кого-то другого из пула
+    else {
+        let current_p1 = new_team1.users.get(role_to_swap.clone()).unwrap();
+        let current_p2 = new_team2.users.get(role_to_swap.clone()).unwrap();
+
+        // Ищем кандидата, которого еще не пытались определить на эту роль
+        if let Some(new_player) = pool.get(role_to_swap.clone()).unwrap().iter().find(|p| p.user_id != current_p1.user_id && p.user_id != current_p2.user_id) {
+            // Поменять местами с игроком из красной команды
+             if rng.random::<bool>() {
+                new_team1.users.insert((*role_to_swap).clone(), new_player.clone());
+             } else { // поменять местами с игроком из синей команды
+                new_team2.users.insert((*role_to_swap).clone(), new_player.clone());
+             }
+        }
+    }
+
+    (new_team1, new_team2)
 }
 
 #[cfg(test)]
@@ -166,8 +223,8 @@ mod tests {
 
     #[test]
     fn test_get_median() {
-        assert_eq!(get_median(vec![1, 2, 3]), 2f64);
-        assert_eq!(get_median(vec![1, 2, 3, 4]), 2.5);
-        assert_eq!(get_median(vec![3, 2, 1, 4]), 2.5);
+        assert_eq!(get_median(&vec![1, 2, 3]), 2f64);
+        assert_eq!(get_median(&vec![1, 2, 3, 4]), 2.5);
+        assert_eq!(get_median(&vec![3, 2, 1, 4]), 2.5);
     }
 }

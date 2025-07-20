@@ -29,9 +29,10 @@ pub struct TeamResponse {
     pub users: Vec<UserRole>,
 }
 
+#[derive(Clone)]
 pub struct Team {
     pub side: String,
-    pub users: Vec<UserData>,
+    pub users: HashMap<String, UserData>,
 }
 
 pub trait SkillMedian {
