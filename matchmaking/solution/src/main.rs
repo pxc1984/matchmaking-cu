@@ -45,7 +45,7 @@ fn main() {
                 Some(epoch.clone())
             );
 
-            let teams = determine_teams::determine(users);
+            let teams = determine_teams::determine(&users);
             let (new_epoch, is_last_epoch) = post_teams::submit(teams, &test_name, epoch.clone());
             epoch = new_epoch;
             running = !is_last_epoch;

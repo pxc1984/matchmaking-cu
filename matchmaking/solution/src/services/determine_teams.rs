@@ -8,10 +8,10 @@ use crate::models::user::UserData;
 /// - рейтинга (ММР)
 /// - предпочитаемых позиций
 /// - того, сколько времени они ждали
-pub fn determine(users: Vec<UserData>) -> Vec<Match> {
+pub fn determine(users: &Vec<UserData>) -> Vec<Match> {
     let users_data = users_to_data(users.clone());
 
-    let mut available_users = users;
+    let mut available_users = users.clone();
 
     // Сортируем пользователей по ММР по убыванию
     available_users.sort_by(|a, b| b.mmr.cmp(&a.mmr));
