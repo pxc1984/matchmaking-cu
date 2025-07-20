@@ -19,10 +19,12 @@ def get_waiting_users():
     test_name = request.args.get('test_name')
     epoch = request.args.get('epoch')
 
-    if test_name is None or epoch is None:
-        return jsonify({"error": "Missing parameters"}), 400
+    if test_name is None:
+        return jsonify({"error": "Missing test name"}, 400)
+    if epoch is None:
+        return jsonify({"error": "Missing epoch"}), 400
 
-    file_path = os.path.join(app.root_path, 'secret_tests', test_name, f"{epoch}.json")
+    file_path = os.path.join(app.root_path, 'tests', test_name, f"{epoch}.json")
 
     if os.path.exists(file_path):
         with open(file_path, 'r') as file:
@@ -70,4 +72,4 @@ def log_match():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000)
+    app.run(host='0.0.0.0', port=8000, debug=True)

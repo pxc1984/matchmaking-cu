@@ -1,4 +1,5 @@
 mod services;
+mod constants;
 
 use tracing::{debug, error, info, warn};
 use tracing_subscriber;
@@ -7,8 +8,9 @@ use std::thread;
 use std::sync::{ Arc, Mutex };
 use std::time::Duration;
 use reqwest::blocking::*;
-
-const SERVER_NAME: &str = "127.0.0.1:8000";
+use crate::constants::SERVER_NAME;
+use crate::services::*;
+use crate::services::get_url::*;
 
 fn main() {
     tracing_subscriber::fmt()
@@ -59,8 +61,4 @@ fn main() {
     info!("Connection to test system running on {} set up successfully", SERVER_NAME);
 
 
-}
-
-fn get_url(endpoint_path: &str) -> String {
-    String::from("http://") + SERVER_NAME + endpoint_path
 }
