@@ -8,10 +8,10 @@ use crate::models::user::UserData;
 /// - рейтинга (ММР)
 /// - предпочитаемых позиций
 /// - того, сколько времени они ждали
-pub fn determine(users: &Vec<UserData>) -> Vec<Match> {
-    let users_data = users_to_data(users.clone());
+pub fn determine(_users: &Vec<UserData>) -> Vec<Match> {
+    let _users_data = users_to_data(_users.clone());
 
-    let mut available_users = users.clone();
+    let mut available_users = _users.clone();
 
     // Сортируем пользователей по ММР по убыванию
     available_users.sort_by(|a, b| b.mmr.cmp(&a.mmr));
@@ -90,10 +90,10 @@ fn get_median(list: Vec<u32>) -> f64
 }
 
 impl SkillMedian for TeamResponse {
-    fn calc_skill_median(&self, user_data: &HashMap<Uuid, UserData>) -> f64 {
+    fn calc_skill_median(&self, _data: &HashMap<Uuid, UserData>) -> f64 {
         let mut skill_levels: Vec<u32> = Vec::with_capacity(self.users.len());
         for user in self.users {
-            let data = user.get(&user_data);
+            let data = user.get(&_data);
             skill_levels.push(data.mmr);
         }
         get_median(skill_levels.clone())
@@ -101,7 +101,7 @@ impl SkillMedian for TeamResponse {
 }
 
 impl SkillMedian for Team {
-    fn calc_skill_median(&self, user_data: &HashMap<Uuid, UserData>) -> f64 {
+    fn calc_skill_median(&self, _data: &HashMap<Uuid, UserData>) -> f64 {
         let skill_levels: Vec<u32> = self.users.iter()
             .map(|user| user.mmr)
             .collect();

@@ -35,7 +35,7 @@ pub struct Team {
 }
 
 pub trait SkillMedian {
-    fn calc_skill_median(&self, user_data: &HashMap<Uuid, UserData>) -> f64;
+    fn calc_skill_median(&self, _data: &HashMap<Uuid, UserData>) -> f64;
 }
 
 #[derive(Serialize)]
