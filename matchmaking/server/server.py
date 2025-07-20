@@ -44,17 +44,20 @@ def log_match():
     if epoch == "last":
         return jsonify({"Nostradamus": "No... no... no..."}), 400
 
-    file_path = os.path.join(app.root_path, 'secret_tests', test_name, f"test.json")
+    file_path = os.path.join(app.root_path, 'tests', test_name, f"test.json")
     if os.path.exists(file_path):
         with open(file_path, 'r') as file:
             epoches = json.load(file)
+    else:
+        return jsonify({"error": "Didn't find the required file"}), 500
 
     new_epoch = epoches.get(epoch)
     last_epoch = epoches.get("last")
 
     data = request.get_json()
 
-    with open(os.path.join('/matchmaking/server/secret_tests/logs', 'result.csv'), 'a', newline='') as csvfile:
+    results_path = os.path.join(app.root_path, "tests", "result.csv")
+    with open(results_path, 'a', newline='') as csvfile:
         result_writer = csv.writer(csvfile, delimiter=' ',
                                    quotechar='|', quoting=csv.QUOTE_MINIMAL)
         for match in data:
@@ -72,4 +75,4 @@ def log_match():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000, debug=True)
+    app.run(host='0.0.0.0', port=8000)

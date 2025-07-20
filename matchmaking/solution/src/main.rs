@@ -12,6 +12,7 @@ use reqwest::blocking::*;
 
 use crate::constants::SERVER_NAME;
 use crate::services::*;
+use crate::services::epoch::Epoch;
 use crate::services::get_url::*;
 use crate::services::test_conn::test_conn;
 
@@ -34,7 +35,20 @@ fn main() {
     info!("Connection to test system running on {} set up successfully", SERVER_NAME);
 
     for test_number in 0..20 {
-        let users = get_waiting_users::get(&test_name_from_int(test_number), None);
+        let mut running = true;
+        let mut epoch = Epoch::new();
+        while running {
+            let test_name = test_name_from_int(test_number);
+            let users = get_waiting_users::get(
+                &test_name,
+                Some(epoch.clone())
+            );
+
+            let teams = determine_teams::determine(users);
+            let (new_epoch, is_last_epoch) = post_teams::submit(teams, &test_name, epoch.clone());
+            epoch = new_epoch;
+            running = !is_last_epoch;
+        }
     }
 }
 
