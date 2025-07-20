@@ -19,10 +19,12 @@ def get_waiting_users():
     test_name = request.args.get('test_name')
     epoch = request.args.get('epoch')
 
-    if test_name is None or epoch is None:
-        return jsonify({"error": "Missing parameters"}), 400
+    if test_name is None:
+        return jsonify({"error": "Missing test name"}, 400)
+    if epoch is None:
+        return jsonify({"error": "Missing epoch"}), 400
 
-    file_path = os.path.join(app.root_path, 'secret_tests', test_name, f"{epoch}.json")
+    file_path = os.path.join(app.root_path, 'tests', test_name, f"{epoch}.json")
 
     if os.path.exists(file_path):
         with open(file_path, 'r') as file:
@@ -42,17 +44,20 @@ def log_match():
     if epoch == "last":
         return jsonify({"Nostradamus": "No... no... no..."}), 400
 
-    file_path = os.path.join(app.root_path, 'secret_tests', test_name, f"test.json")
+    file_path = os.path.join(app.root_path, 'tests', test_name, f"test.json")
     if os.path.exists(file_path):
         with open(file_path, 'r') as file:
             epoches = json.load(file)
+    else:
+        return jsonify({"error": "Didn't find the required file"}), 500
 
     new_epoch = epoches.get(epoch)
     last_epoch = epoches.get("last")
 
     data = request.get_json()
 
-    with open(os.path.join('/matchmaking/server/secret_tests/logs', 'result.csv'), 'a', newline='') as csvfile:
+    results_path = os.path.join(app.root_path, "tests", "result.csv")
+    with open(results_path, 'a', newline='') as csvfile:
         result_writer = csv.writer(csvfile, delimiter=' ',
                                    quotechar='|', quoting=csv.QUOTE_MINIMAL)
         for match in data:

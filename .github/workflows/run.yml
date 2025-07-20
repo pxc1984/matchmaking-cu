@@ -4,7 +4,9 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - matchmaking/*
+      - "**/*src/**"
+      - "**/tests/**"
+      - "matchmaking/**"
 
 jobs:
   testing:
