@@ -4,14 +4,13 @@ services:
       context: matchmaking/server
       target: builder
     stop_signal: SIGINT
-    hostname: server
+#    hostname: server
     ports:
       - '8000:8000'
     volumes:
-      - './logs:/matchmaking/server/secret_tests/logs'
+      - './logs:/matchmaking/server/tests/logs'
 
   solution:
     build:
       context: matchmaking/solution
-    command: /bin/sh -c "sleep 5 && /bin/server"
     stop_signal: SIGINT
