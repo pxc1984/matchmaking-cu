@@ -1,19 +1,12 @@
-﻿use std::ops::Deref;
-use tracing::{debug, error, info, warn};
-use tracing_subscriber;
+﻿use tracing::{debug, error, info, warn};
 
 use std::thread;
-use std::sync::{Arc, Mutex, MutexGuard};
-use std::time::{
-    Duration,
-};
+use std::sync::{Arc, Mutex};
 use reqwest::blocking::*;
-use serde_json;
-use crate::models::submit::{Match, SubmitTeamsResponse, TeamResponse};
-use crate::models::user::UserData;
+
+use crate::models::submit::{Match, SubmitTeamsResponse};
 use super::epoch::*;
 use super::get_url::*;
-use super::*;
 
 
 pub fn submit(matches: Vec<Match>, test_name: &str, epoch: Epoch) -> (Epoch, bool) {
@@ -57,7 +50,7 @@ pub fn submit(matches: Vec<Match>, test_name: &str, epoch: Epoch) -> (Epoch, boo
                         }
                     } else {
                         let status = response.status();
-                        let text = response.text().unwrap_or_else(|e| "N/A".to_string());
+                        let text = response.text().unwrap_or_else(|_| "N/A".to_string());
                         error!("Server returned error for {url}: Status {status} - Body: {text}")
                     }
                 }

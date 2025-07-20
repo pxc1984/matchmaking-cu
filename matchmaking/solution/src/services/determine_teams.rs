@@ -55,7 +55,7 @@ pub fn determine(all_users: &Vec<UserData>) -> Vec<Match> {
         });
 
         // Удаляем уже выбранных игроков из очередей
-        for (role, players) in users_by_role.iter_mut() {
+        for (_role, players) in users_by_role.iter_mut() {
             players.retain(|p| !match_players_ids.contains(&p.user_id));
         }
     }

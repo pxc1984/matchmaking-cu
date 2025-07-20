@@ -4,6 +4,7 @@ use serde::{
     Serialize,
 };
 use uuid::Uuid;
+
 use crate::models::user::UserData;
 use crate::services::epoch::Epoch;
 
@@ -15,12 +16,8 @@ pub struct SubmitTeamsResponse {
 
 #[derive(Serialize, Clone)]
 pub struct UserRole {
-    pub id: uuid::Uuid,
+    pub id: Uuid,
     pub role: String,
-}
-
-pub trait GetInfo {
-    fn get(&self, data: &HashMap<Uuid, UserData>) -> UserData;
 }
 
 #[derive(Serialize)]
@@ -35,16 +32,8 @@ pub struct Team {
     pub users: HashMap<String, UserData>,
 }
 
-pub trait SkillMedian {
-    fn calc_skill_median(&self, _data: &HashMap<Uuid, UserData>) -> f64;
-}
-
 #[derive(Serialize)]
 pub struct Match {
     pub match_id: String,
     pub teams: Vec<TeamResponse>,
-}
-
-pub trait Fairness {
-    fn calc_fairness(&self, data: &HashMap<Uuid, UserData>) -> i64;
 }

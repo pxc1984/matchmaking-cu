@@ -1,19 +1,12 @@
-﻿use std::ops::Deref;
-use tracing::{debug, error, info, warn};
-use tracing_subscriber;
+﻿use tracing::{debug, error, info, warn};
 
 use std::thread;
-use std::sync::{Arc, Mutex, MutexGuard};
-use std::time::{
-    Duration,
-};
+use std::sync::{Arc, Mutex};
 use reqwest::blocking::*;
-use serde_json;
 
 use crate::models::user::UserData;
 use super::epoch::*;
 use super::get_url::*;
-use super::*;
 
 pub fn get(test_name: &str, input_epoch: Option<Epoch>) -> Vec<UserData> {
     let client = Arc::new(Client::new());
