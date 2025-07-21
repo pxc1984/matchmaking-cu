@@ -9,6 +9,7 @@ on:
       - "matchmaking/**"
       - "**docker**"
       - "**Docker**"
+      - ".github/workflows/**"
 
 jobs:
   testing:
