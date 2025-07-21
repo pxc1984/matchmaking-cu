@@ -33,6 +33,7 @@ jobs:
 
       - name: ls files
         run: |
+          chroot -R runner:docker /home/runner/work/matchmaking-cu/matchmaking-cu
           ls -la /home/runner/work/matchmaking-cu/matchmaking-cu
           ls -la /home/runner/work/matchmaking-cu/matchmaking-cu/logs
 
