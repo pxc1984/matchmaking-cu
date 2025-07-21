@@ -75,4 +75,5 @@ def log_match():
 
 
 if __name__ == '__main__':
+    print(f"path to artifacts is: {os.path.join(app.root_path, "tests", "result.csv")}")
     app.run(host='0.0.0.0', port=8000)
