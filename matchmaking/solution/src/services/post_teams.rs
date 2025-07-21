@@ -5,7 +5,7 @@ use std::sync::{Arc, Mutex};
 use reqwest::blocking::*;
 
 use crate::models::submit::{Match, SubmitTeamsResponse};
-use super::epoch::*;
+use crate::models::epoch::*;
 use super::get_url::*;
 
 

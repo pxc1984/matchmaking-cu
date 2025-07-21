@@ -5,7 +5,7 @@ use std::sync::{Arc, Mutex};
 use reqwest::blocking::*;
 
 use crate::models::user::UserData;
-use super::epoch::*;
+use crate::models::epoch::*;
 use super::get_url::*;
 
 pub fn get(test_name: &str, input_epoch: Option<Epoch>) -> Vec<UserData> {

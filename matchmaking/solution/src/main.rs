@@ -11,7 +11,7 @@ use std::collections::VecDeque;
 
 use crate::constants::{SERVER_NAME, THREAD_COUNT};
 use crate::services::*;
-use crate::services::epoch::Epoch;
+use models::epoch::Epoch;
 use crate::services::get_url::*;
 use crate::services::test_conn::test_conn;
 

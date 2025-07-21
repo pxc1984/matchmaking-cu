@@ -6,7 +6,7 @@ use serde::{
 use uuid::Uuid;
 
 use crate::models::user::UserData;
-use crate::services::epoch::Epoch;
+use crate::models::epoch::Epoch;
 
 #[derive(Deserialize)]
 pub struct SubmitTeamsResponse {
