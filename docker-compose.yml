@@ -17,3 +17,4 @@ services:
     environment:
       SERVER_NAME: server:8000
     stop_signal: SIGINT
+    user: "${RUNNER_UID}:${RUNNER_GID}"
