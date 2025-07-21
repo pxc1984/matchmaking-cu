@@ -7,6 +7,8 @@ on:
       - "**/*src/**"
       - "**/tests/**"
       - "matchmaking/**"
+      - "**docker**"
+      - "**Docker**"
 
 jobs:
   testing:
@@ -25,12 +27,15 @@ jobs:
           docker version
           docker compose version
 
-      - name: Start containers
-        run: docker compose -f "docker-compose.yml" up --build --abort-on-container-exit
-
-      - name: Archive tests
-        uses: actions/upload-artifact@v4
-        with:
-          name: tests-${{ github.REPOSITORY_ID }}-${{ github.workflow }}
-          path: /server/tests/result.csv
-          if-no-files-found: error
+      - name: pwd
+        run: pwd
+#
+#      - name: Start containers
+#        run: docker compose -f "docker-compose.yml" up --build --abort-on-container-exit
+#
+#      - name: Archive tests
+#        uses: actions/upload-artifact@v4
+#        with:
+#          name: tests-${{ github.REPOSITORY_ID }}-${{ github.workflow }}
+#          path: /server/tests/result.csv
+#          if-no-files-found: error
