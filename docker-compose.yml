@@ -5,6 +5,7 @@ services:
       target: builder
     stop_signal: SIGINT
     hostname: server
+    user: "${RUNNER_UID}:${RUNNER_GID}"
     ports:
       - '8000:8000'
     volumes:

@@ -28,14 +28,17 @@ jobs:
           docker version
           docker compose version
 
+      - name: Get runner UID and GID
+        id: runner_info
+        run: |
+          echo "RUNNER_UID=$(id -u runner)" >> $GITHUB_OUTPUT
+          echo "RUNNER_GID=$(id -g runner)" >> $GITHUB_OUTPUT
+
       - name: Start containers
         run: docker compose -f "docker-compose.yml" up --build --abort-on-container-exit
-
-      - name: ls files
-        run: |
-          chown -R runner:docker /home/runner/work/matchmaking-cu/matchmaking-cu
-          ls -la /home/runner/work/matchmaking-cu/matchmaking-cu
-          ls -la /home/runner/work/matchmaking-cu/matchmaking-cu/logs
+        env:
+          RUNNER_UID: ${{ steps.runner_info.outputs.RUNNER_UID }}
+          RUNNER_GID: ${{ steps.runner_info.outputs.RUNNER_GID }}
 
       - name: Archive tests
         uses: actions/upload-artifact@v4
